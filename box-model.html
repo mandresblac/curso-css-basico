@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja en css</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/box-model.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio-modelo-caja">Modelo de caja en css (Box model)</h1>
+
+    <article id="temario.modelo-caja">
+        <h2>Temario modelo de caja</h2>
+        <ol type="a">
+            <li><a href="box-model.html#que-es-modelo-caja">Que es el modelo de caja</a></li>
+            <li><a href="box-model.html#propiedades-ancho-alto">Propiedades width & height</a></li>
+            <li><a href="box-model.html#bordes">Propiedad border</a></li>
+            <li><a href="box-model.html#margin-padding">Propiedades Margin & Padding</a></li>
+            <li><a href="box-model.html#diferencia-elementos-linea-bloque">Diferencia entre elementos de línea
+                    Vs elementos de bloque</a>
+            </li>
+            <li><a href="box-model.html#propiedad-display">Propiedad display</a></li>
+
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <hr>
+    </article>
+
+    <article id="que-es-modelo-caja">
+        <h2>Que es el modelo de caja</h2>
+        <p>El modelo de caja es la forma como css ve las etiquetas HTML, se llama
+            modelo de caja (o box model) porque para css cada uno de los elementos o etiquetas
+            de HTML son un caja y pueden ser cajas de línea o cajas de bloque.
+        </p>
+
+        <p>
+            Cada caja tiene las siguientes propiedades, es decir esta compuesta interiormente
+            por:
+        <ol>
+            <li><b>El contenido (Caja de contenido o content box):</b> Que es el texto del
+                elemento HTML, tomando en cuenta sus dimensiones (width & height).</li>
+            <li><b>El relleno (padding):</b> Que es la distancia interna que hay del contenido
+                (Content box) al borde (border).</li>
+            <li><b>El borde (border):</b> Que es lo que delimita cada uno de los elementos HTML.
+            </li>
+            <li><b>El margen (margin):</b> Son las distancias externas que hay entre un elemento
+                HTML y otro, o su contenedor, sean hermanos o padres.</li>
+        </ol>
+
+        </p>
+
+        <p>
+            Dentro del modelo de caja hay que considerar que una caja tendra 4 lados (que van en
+            el sentido de las manesillas del reloj):
+        <ol>
+            <li>Arriba (<b>top</b>).</li>
+            <li>Derecha (<b>right</b>).</li>
+            <li>Abajo (<b>bottom</b>).</li>
+            <li>izquierda (<b>Left</b>).</li>
+        </ol>
+        </p>
+
+        <p>
+            Enlaces a documentacion e imagenes acerca del Modelo de caja (Box model):
+        <ul>
+            <li>
+                <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model"
+                    target="_blank">MDN
+                    (Motzilla Developed Network)</a>
+            </li>
+            <li>
+                <a href="https://3con14.biz/css/modelo-de-cajas/25-modelo-de-caja.html">3con14LAB</a>
+            </li>
+            <li>
+                <a href="https://devcode.la/tutoriales/modelo-caja-css/">Devcode</a>
+            </li>
+            <li>
+                <a href="https://cssreference.io/">cssreference</a>
+            </li>
+        </ul>
+
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+
+    </article>
+
+    <article id="propiedades-ancho-alto">
+        <h2>Propiedades width & height</h2>
+        <p>
+            Las propiedades width & heigh nos van a permitir definir la anchura (width) y la
+            altura (height) de los elementos HTML, ejemplo:
+        <div class="ejemplo1">Esto es un ejemplo de las propiedades width & heigh</div>
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+    <article id="bordes">
+        <h2>Propiedad border</h2>
+        <p>El border (borde) es lo que va a delimitar a cada uno de los elementos HTML y tiene tres propiedades:
+        <ul>
+            <li>border-color: Para dar color al borde.</li>
+            <li>border width: Para el ancho o espesor del borde, y puede tener varios valores como:</li>
+            <ul>
+                <li>thin (delgado): 1px de grosor.</li>
+                <li>medium: 3px de grosor.</li>
+                <li>thick (grueso):5px de grosor.</li>
+            </ul>
+            <li>border-style: Que es el estilo de la línea y puede tener varios valores como:
+                <ul>
+                    <li>solid: Línea solida </li>
+                    <li>dashed: Línea discontinua</li>
+                    <li>dotted: Línea punteada discontinua</li>
+                    <li>double: Doble línea solida</li>
+                    <li>Y muchas otras.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ejemplo2">Esto es un ejemplo de las propiedades width & heigh</div>
+        </p>
+
+        <p>
+            En el siguiente enclace se pueden ver todas la propiedades css: <a href="https://cssreference.io/"
+                target="_blank">cssreference</a>
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+
+    </article>
+
+    <article id="margin-padding">
+        <h2>Propiedades Margin & Padding</h2>
+        <p>
+
+        </p>
+        <div class="caja-uno">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at ut earum explicabo! Labore id sit magnam
+            itaque nulla delectus, officia quas eligendi? Amet ratione ullam magni, dolores perferendis quod?
+        </div>
+        <div class="caja-dos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit id ad deserunt,
+            dolor ex eum
+            deleniti vero sint quibusdam, minus, totam eveniet aut. Voluptates hic blanditiis commodi debitis
+            dignissimos quos?</div>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+
+    </article>
+
+    <article id="diferencia-elementos-linea-bloque">
+        <h2>Diferencia entre elementos de línea Vs elementos de bloque</h2>
+        <h3>Elementos o cajas de línea:</h3>
+        <ul>
+            <li>Ocupan el espacio necesario para mostrar su contenido.</li>
+            <li>No tienen dimensiones modificables (alto, ancho).</li>
+            <li>Al ocupar solamente el espacio requerido van a permitir otros elementos a su
+                lado.
+            </li>
+            <li>Padding y margin laterales solo empujan a los elementos que esten al lado
+                (en horizontal), <b>NUNCA APLICAR PADDING Y MARGIN EN VERTICAL (osea top o
+                    bottom) PORQUE NO FUNCIONARAN</b>.
+            </li>
+        </ul>
+
+        <h3>Elementos o cajas de bloque:</h3>
+        <ul>
+            <li>Ocupan todo el ancho disponible, lo que genera saltos de línea.</li>
+            <li>Se ubican una encima de otra.</li>
+            <li>Tienen dimensiones modificables, por lo que se les puede aplicar ancho y alto (width &height).</li>
+            <li>No permiten que otros elementos esten a su lado (aunque especifique un ancho (width)) los desplazan con
+                un salto de
+                línea, siguen ocupando todo el espacio disponible a lo ancho, generando saltos de línea tanto arriba
+                como abajo.</li>
+        </ul>
+
+        <h4>Ejmplos:</h4>
+        <br>
+        <span class="caja-linea">Esto es una caja de línea</span>
+        <span>Esto es una span</span>
+        <div class="caja-bloque">Esto es una caja de bloque</div>
+
+        <p>
+            Enlace a documentacion sobre elementos de línea y elementos de bloque:
+            <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model" target="_blank">MDN
+                (Motzilla
+                Developed Network)</a>.
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+    <article id="propiedad-display">
+        <h2>Propiedad display</h2>
+
+
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+</body>
+
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio">APRENDIENDO CSS <br> (Cascading style sheet) o (Hojas de Estilo en
+        Cascada)</h1>
+
+    <article id="temario-css">
+        <h2>Temario del curso</h2>
+        <ol>
+            <li><a href="index.html#introduccion">Introduccion a CSS</a></li>
+            <li><a href="index.html#sintaxis-basica">Sintaxis basica de CSS</a></li>
+            <li><a href="index.html#comentarios">Comentarios en CSS</a></li>
+            <li><a href="index.html#invocacion">Formas de invocacion CSS</a>
+                <ol type="a">
+                    <li><a href="index.html#linea">En línea</a></li>
+                    <li><a href="index.html#interno">Interno</a></li>
+                    <li><a href="index.html#externo">Externo</a></li>
+                </ol>
+            </li>
+            <li><a href="index.html#versiones">Versiones, documentación y enlaces de referencia</a></li>
+            <li><a href="index.html#selectores-basicos">Selectores básicos: Etiquetas, Identificadores y Clases</a>
+                <ol type="a">
+                    <li><a href="index.html#selectores-etiqueta">Selectores de tipo o etiqueta</a></li>
+                    <li><a href="index.html#identificadores">Identificadores</a></li>
+                    <li><a href="index.html#clases">Clases</a></li>
+                </ol>
+            </li>
+            <li><a href="index.html#selectores-avanzados">Selectores avanzados</a>
+                <ol type="a">
+                    <li><a href="index.html#selector-hijos">Selectores de hijos</a></li>
+                    <li><a href="index.html#selectores-hermanos">Selectores de hermanos</a></li>
+                </ol>
+            </li>
+            <li><a href="index.html#selectores-atributos">Selectores de atributos</a></li>
+            <li><a href="index.html#selector-universal">Selector universal</a></li>
+            <li><a href="index.html#pseudoclases">Pseudo-clases</a>
+                <ol type="a">
+                    <li><a href="index.html#pseudoclases-interactivos">Pseudoclases de elementos interactivos</a></li>
+                    <li><a href="index.html#pseudoclases-posicion">Pseudoclases por la
+                            posición que ocupa el elemento dentro de su contenedor</a></li>
+                </ol>
+            </li>
+            <li><a href="index.html#pseudoelementos">Pseudoelementos</a>
+                <ol type="a">
+                    <li><a href="index.html#pseudoelementos1">Pseudoelementos ::after y ::before</a></li>
+                    <li><a href="index.html#pseudoelementos2">Pseudoelementos ::first-letter, ::first-line y
+                            ::selection</a></li>
+                    <li><a href="index.html#pseudoelementos3">Pseudoelemento ::placeholder</a></li>
+                </ol>
+            </li>
+            <li><a href="index.html#agrupacion-selectores">Agrupación de selectores</a></li>
+            <li><a href="index.html#algoritmo-css">El algoritmo de CSS</a>
+                <ol type="a">
+                    <li><a href="index.html#cascada">La cascada</a></li>
+                    <li><a href="index.html#especificidad">La especificidad</a></li>
+                    <li><a href="index.html#herencia">La herencia</a></li>
+                </ol>
+            </li>
+            <li><a href="index.html#reseteo-estilos">Reseteo y Normalización de estilos</a></li>
+            <li><a href="index.html#prefijos-navegadores">Prefijos de los navegadores</a></li>
+            <li><a href="box-model.html#inicio-modelo-caja">Modelo de caja en css (Box model)</a>
+                <ol type="a">
+                    <li><a href="box-model.html#propiedades-ancho-alto">Propiedades width & height</a></li>
+                    <li><a href="box-model.html#bordes">Propiedad border</a></li>
+                    <li><a href="box-model.html#margin-padding">Propiedades Margin & Padding</a></li>
+                    <li><a href="box-model.html#diferencia-elementos-linea-bloque">Diferencia entre elementos de línea
+                            Vs elementos de bloque</a>
+                    </li>
+                    <li><a href="box-model.html#propiedad-display">Propiedad display</a></li>
+                </ol>
+            </li>
+
+
+            <li><a href="index.html#enlaces">Enlaces y links de referencia y documentacion de css</a></li>
+        </ol>
+        <hr>
+    </article>
+
+    <article id="introduccion">
+        <h2>Introduccion a CSS</h2>
+        <p>
+            CSS <i>(Cascading Style Sheets)</i>- (Hojas de estilo en cascada) <br> CSS es un lenguaje de
+            definicion de la presentacion de los documentos HTML, es decir como se va a visualizar el
+            contenido del documento HTML.<br>
+            CSS aparece por alla en el año 1996
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="sintaxis-basica">
+
+        <h2>Sintaxis basica de CSS</h2>
+
+        <p>Una regla CSS consta de dos partes que son:</p>
+
+        <ol>
+            <li>
+                <h3>El selector:</h3>
+                <p>
+                    Es el elemento HTML al que podemos aplicarle ese bloque de declaracion de estilos.
+                </p>
+            </li>
+            <li>
+                <h3>Bloque de declaraciones:</h3>
+                <p>
+                    El Bloque de declaracion esta definido por las llaves, dentro de esas llaves van los
+                    atributos, los atributo son los que vamos a modificar y que tienen la siguiente sintaxis:
+                    <br>
+                    <code>
+                    selector {<br>
+                        atributo: valor;<br>
+                        atibuto-de-mas-de-dos-palabras: valor;<br>
+                }</code>
+                </p>
+                <p>
+                    Ejemplo de declaracion CSS o regla de definicion de hojas de estilo en cascada CSS: <br>
+                    <code>
+                        h1{<br>
+                            color: yellow;<br>
+                            background-color: black;<br>
+                            text-align: center;<br>
+                            font-family: sans-serif;<br>
+                        }
+                    </code>
+                </p>
+            </li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+
+        <hr>
+    </article>
+
+    <article id="comentarios">
+        <h2>Comentarios en CSS</h2>
+
+        <p>Los comentarios en CSS se declaran así: /* */, ejemplo:
+            <br>
+            /*
+            <br>
+            Este es un texto comentado en CSS
+            <br>
+            */
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="invocacion">
+        <h2>Formas de invocacion CSS</h2>
+        <p>Hay 3 formas de de conectar, invocar o vincular documentos CSS a un documento HTML </p>
+        <ol>
+            <li>
+                <dt id="linea">En línea</dt>
+                <dd>Utilizando el atributo <code>style</code> dentro de una etiqueta HTML
+                    <code style="color: red; background-color: lightblue">ejemplo:</code>
+                    <br>
+                </dd>
+            </li>
+            <li>
+                <dt id="interno">Interno</dt>
+                <dd>Utilizando la etiqueta <code>style</code> en la seccion <code>head</code> del documento
+                    HTML.
+                </dd>
+            </li>
+            <li>
+                <dt id="externo">Externo</dt>
+                <dd>Mediante la definicion de un archivo u hoja externa con extension .css que se vincula
+                    con el documento HTML (utilizando la etiqueta <code>link</code> dentro del elemento
+                    <code>head</code> del documento HTML) y que en su atributo <code>rel</code> debe decir
+                    <code>stylesheet</code> y en su atributo <code>href</code> debe llevar la ruta que
+                    indica la ubicacion del archivo .css
+                </dd>
+            </li>
+
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="versiones">
+        <h2>Versiones, documentación y enlaces de referencia</h2>
+
+        <p>En CSS no se habla de versiones si no de modulos en particular y cada modulo va evolucionando a
+            su ritmo
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+
+        <hr>
+    </article>
+
+    <article id="selectores-basicos">
+        <h2>Selectores básicos: Etiquetas, Identificadores y Clases</h2>
+
+        <p>Los selectores identifican a que elemento del documento html se le va a aplicar el estilo que se
+            defina con css
+        </p>
+
+        <p>
+            Existen 3 selectores basicos:
+        <ol>
+            <li id="parrafo-uno">
+                <h3 id="selectores-etiqueta">Selectores de tipo o etiqueta:</h3>
+                Funcionan simplenmente escribiendo el nombre de la etiqueta HTML.
+            </li>
+            <li id="parrafo-dos">
+                <h3 id="identificadores">Identificadores:</h3>
+                Se accede a traves del atributo id="" de un elemento HTML, el id es un identificador unico
+                que no se vaa repetir nunca.
+                Los id se usan una sola vez por lo tanto se recomienda su uso solo para Javascript.
+                Los id se indican con el simbolo numeral # ejemplo #title
+                <br>
+                <b><u>NOTA:</u></b> Dar estilos con id se considera un antipatron, es decir una mala
+                practica, esto se refiere a que cada elemento HTMOL debe tener un nombre unico como valor
+                del atributo id, no se debe repetir el mismo nombre del atirbuto id entro elemento HTML.
+            </li>
+            <li class="text-32 bg-skyblue text-white">
+                <h3 id="clases">Clases:</h3>
+                Se accede a traves del atributo class="" de un elemento HTML.
+                Las clases se indican con el punto . ejemplo: .container
+                <br>
+                <b><u>NOTA:</u></b> Se recomienda que los nombres de las clases sean alucibos a lo que hacen
+                cada clase.
+            </li>
+        </ol>
+
+        </p>
+        <h4>Parrafo de prueba de selectores</h4>
+        <p class="text-32 bg-skyblue text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum molestias, ex cumque libero
+            deleniti doloremque placeat? Officiis inventore eaque nisi? Soluta molestias veritatis iusto?
+            Quod iusto veniam voluptatem estaliquid.
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="selectores-avanzados">
+        <h2>Selectores avanzados</h2>
+        <h3 id="selector-hijos">Selectores de hijos</h3>
+        <p>Hay de dos tipos:</p>
+        <ol>
+            <li>
+                <h4 id="selector-hijos-directos">Selector de hijos directos</h4>
+                <p>El selector de hijos directos solamente aplica a los elementos en el primer nivel, es
+                    decir:<code><b> elemento_padre > elemento_hijo</b></code>.
+                </p>
+                <ul class="hijos-directos" type="square">
+                    <li><b>Primavera</b></li>
+                    <li><b>Verano</b></li>
+                    <li><b>Otoño</b></li>
+                    <li><b>Invierno</b></li>
+                </ul>
+                <p>En el ejemplo anterior (de selector de hijos directos), se colorea todo el contenido de
+                    la etiqueta ul, es decir todo el cuadro que abarcan todos sus elementos internos.
+                </p>
+            </li>
+            <li>
+                <h4 id="selector-hijos-descendientes">Selector de hijos descendientes</h4>
+                <p>El selector de hijos descendientes aplica sin importar el orden descendente en el que los
+                    hijos se encuentren con relacion a su padre, y se representa por un espacio en blanco,
+                    es decir:
+                    <code><b>elemento_padre elemento_hijo elemento_nieto elemento_bisnieto</b></code>
+                </p>
+                <ul class="hijos-descendientes" type="square">
+                    <li><b>Primavera</b></li>
+                    <li><b>Verano</b></li>
+                    <li><b>Otoño</b></li>
+                    <li><b>Invierno</b></li>
+                    <p>En el ejemplo anterior (de selector de hijos descendientes), solamante se colorea el
+                        contenido de la etiqueta b (bold), es decir unicamente la palabra.</p>
+                </ul>
+            </li>
+        </ol>
+
+        <h3 id="selectores-hermanos">Selectores de hermanos</h3>
+        <p>Los selectores de hermanos son elementos que estan en el mismo nivel del elemento de referencia. <br> Hay de
+            dos tipos:</p>
+        <ol>
+            <li>
+                <h4 id="selectores-hermanos-general">Selector de hermanos (en general)</h4>
+                <p>Los selector de hermanos van a aplicar estilos a los elementos que son hermanos (es decir
+                    que estan en el mismo nivel) y que esten por debajo del elemento de referencia y su
+                    simbolo es la virgulilla ~.
+                </p>
+                <ul type="square">
+                    <li class="hermanos-general"><b>Primavera</b></li>
+                    <li><b>Verano</b></li>
+                    <li><b>Otoño</b></li>
+                    <li><b>Invierno</b></li>
+                </ul>
+            </li>
+            <li>
+                <h4 id="selectores-hermanos-adyacentes">Selector de hermanos (adyacentes)</h4>
+                <p>Los selector de hermanos adyacentes van a aplicar los estilos al elemento que coincida
+                    con la segunda parte de nuestro selector y que este por debajo inmediatamente del
+                    elemento de referencia y su simbolo es el mas +.
+                </p>
+                <ul type="square">
+                    <li class="hermanos-adyacentes"><b>Primavera</b></li>
+                    <li><b>Verano</b></li>
+                    <li class="hermanos-adyacentes"><b>Otoño</b></li>
+                    <li><b>Invierno</b></li>
+                </ul>
+            </li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="selectores-atributos">
+        <h2>Selectores de atributos</h2>
+        <p>Los selectores de atributos nos van a permitir aplicar estilos tomando como
+            referencia cualquier atributo de un elemento HTML, para utilizar el selector de
+            atributos hay que poner entre corchetes [] el atributo al que se va a hacer
+            referencia.
+            <br>
+            <b><u>NOTA:</u></b> Para ver la informacion completa sobre este tema revisar la
+            seccion "selectores de atributo" que se encuentra en el archivo styles.css
+            dentro de la carpeta CSS.
+        </p>
+        <nav class="selectores-atributos">
+            <ul>
+                <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+                <li><a class="menu-item cursos button" href="https://jonmircha.com/cursos" target="_blank">Cursos</a>
+                </li>
+                <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+                <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+                <li><a class="menu item ahora button" href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+                <li><a class="menu-item notas button" href="http://jonmircha.com/notas" target="_blank">Notas</a></li>
+                <li><a href="index.html#inicio">Regresar al temario</a></li>
+            </ul>
+        </nav>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="selector-universal">
+        <h2>Selector universal (*)</h2>
+        <p>El selector universal va a aplicar los estilos a todos los elementos o etiquetas que esten dentro
+            del documento HTML, a todos absolutamente todos. El asterisco (*) representa el selector
+            universal.
+        </p>
+
+        <ul class="selector-universal" type="square">
+            <li><b>Primavera</b></li>
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="pseudoclases">
+        <h2>Pseudo-clases</h2>
+        <h3 id="pseudoclases-interactivos">Pseudoclases de elementos interactivos</h3>
+        <p>Las pseudoclases son un tipo de selector, pero es un selector especial. <br>
+            Las pseudoclases ban a dar estilos dependiendo del contexto, posisión o estado del elemento al
+            que le queremos aplicar estilos o dependiendo de ciertos estados que tenga el elemento HTML.
+            <br>
+            Las pseudoclases se distinguen porque empiezan con dos putos ":" por ejemplo: <br>
+            <br>
+            <code>
+                .form-pseudoclases *<b>:</b>required{ <br>
+                    border-color: yellow; <br>
+                }
+            </code>
+            <br>
+            <br>
+            Las pseudoclases se utilizan mucho en los formularios.
+        </p>
+
+        <h4>Ejemplo de uso de pseudoclases en un formulario</h4>
+        <form class="form-pseudoclases">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+            <br>
+            <input type="email" name="correo" placeholder="Escribe tu correo" required>
+            <br>
+            <input type="submit">
+            <input type="submit" disabled>
+        </form>
+        <br>
+        <nav class="menu-pseudoclases">
+            <a href="#seccion1">Seccion1</a>
+            <a href="#seccion1">Seccion2</a>
+            <a href="#seccion1">Seccion3</a>
+            <a href="#seccion1">Seccion4</a>
+        </nav>
+        <p class="p-pseudoclases">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perspiciatis magnam dignissimos
+            dolore atque totam expedita natus praesentium eos, quae fugiat voluptatibus eum accusantium,
+            laboriosam, sapiente voluptas voluptates provident molestias!
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+
+        <h3 id="pseudoclases-posicion">Pseudoclases por la posición que ocupa el elemento dentro de su contenedor</h3>
+        <ol class="lista-pseudoclases">
+            <li>Mú de Aries</li>
+            <li>Aldebarán de Tauro</li>
+            <li>Saga & Canon de Géminis</li>
+            <li>Death Mask de Cáncer</li>
+            <li>Aioria de Leo</li>
+            <li>Shaka de Virgo</li>
+            <li>Dohko de Libra</li>
+            <li>Milo de Escorpión</li>
+            <li>Aioros de Sagitario</li>
+            <li>Shura de capricornio</li>
+            <li>Camus de Acuario</li>
+            <li>Afrodita de Piscis</li>
+        </ol>
+        <br>
+
+        <article class="articulo-pseudoclases">
+            <header>Esto es una header</header>
+            <p>Esto es un p</p>
+            <div>Esto es un div</div>
+            <p>Esto es un p</p>
+            <section>Esto es una section</section>
+            <p>Esto es un p</p>
+            <div>Esto es un div</div>
+            <p>Esto es un p</p>
+            <footer>Esto es un footer</footer>
+        </article>
+
+        <p>
+            Ir a ejemplo uso pseudoclases <a href="pseudoclasesLinkVisitedHoverActive.html"><b>:link, :visited, :hover y
+                    :active</b></a>
+        </p>
+
+        <p>
+            Enlace a documentacion de Pseudo-clases en el sl sitio
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes" target="_blank">MDN</a>
+            (MozillaDeveloped Network).
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="pseudoelementos">
+
+        <h2>Pseudoelementos</h2>
+
+        <p>Los Pseudoelementos dan estilos a partes especificas de un elemento y para diferenciarlos de las
+            pseudoclases se utilizan doble par de dos puntos "::"
+        </p>
+
+        <h3 id="pseudoelementos1">Pseudoelementos ::after y ::before</h3>
+        <p>Estas pseudoclases nos van a permitir agregar contenido antes (::before) o despues (::after) de
+            un elementoen particular.
+            <br>
+            <b><u>NOTA</u></b> Para usarlos necesitamos poner obligatoriamente el atributo
+            <code>content</code> que va aindicar el texto de contenido que va a ir antes o despues.
+        </p>
+
+        <p>
+            <i>Banday Myth Cloth Ex</i> <span class="saga-geminis">Saga de Géminis</span>
+            <span class="saga-precio">500</span>
+        </p>
+
+        <h3 id="pseudoelementos2">Pseudoelementos ::first-letter, ::first-line y ::selection</h3>
+        <p>
+            <b>::first-letter</b> Hace referencia a la primera letra de una palabra o letra capital.
+            <br>
+            <b>::first-line</b> Hace referencia a la primera línea de un parrafo.
+            <br>
+            Los pseudoelementos ::first-letter y ::first-line aplican para cualquier elemento de bloque.
+            <br>
+
+            <b>::selection</b> Hace referencia a cuando el usuario selecciona el texto.
+            <br>
+            <br>
+            Ejemplo:
+        </p>
+        <p class="p-pseudoelementos">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptatem vero eveniet natus
+            aliquam, sapiente quaerat molestiae numquam doloremque libero rerum non accusamus consequuntur,
+            laudantium consequatur cumque quod neque nemo.
+        </p>
+
+        <h3 id="pseudoelementos3">Pseudoelemento ::placeholder</h3>
+        <input class="input-pseudoelementos" type="text" name="nombre" placeholder="Escribe aquí tu nombre">
+
+        <p>
+            Enlace a documentacion de Pseudoelementos en el sl sitio
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements" target="_blank">MDN</a>
+            (Mozilla Developed Network).
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="agrupacion-selectores">
+        <h2>Agrupación de selectores</h2>
+        <p>La agrupacion de selectores mas sencilla es utilizando la coma "," y significa que a todos los
+            selectores quevayan separados por coma "," se les aplicara el mismo estilo, ejemplo:</p>
+        <code>
+        .form-agrupar-selectores input[type="text"]<b>,</b><br>
+        .form-agrupar-selectores input[type="email"]<b>,</b><br>
+        .form-agrupar-selectores textarea{<br>
+            border-color: yellow;<br>
+            background-color: black;<br>
+            font-size: 20px;<br>
+        }
+        </code>
+
+        <form class="form-agrupar-selectores">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre">
+            <input type="email" name="correo" placeholder="Escribe tu correo electronico">
+            <textarea name="comentario" placeholder="Escribe tus comentarios" cols="30" rows="10"></textarea>
+            <input type="submit">
+        </form>
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="algoritmo-css">
+        <h2>El algoritmo de CSS</h2>
+        <p>En esta seccion veremos como funciona internamente CSS y como aplica los estilos.
+            <br>
+            El algoritmo de CSS es la forma en que el navegador va a aplicar los estilos a
+            los documentos HTML y es de vital importancia comprender este concepto para
+            poder entender como funciona CSS.
+        </p>
+
+        <p>El algoritmo de css lo podemos subdividir en tres temas particulares:</p>
+
+        <ol>
+            <li>
+                <h3 id="cascada">La cascada</h3>
+                <p>Conforme el navegador va leyendo las líneas de codigo que estan en el
+                    documento HTML, es decir el orden de aparicion, que es de arriba hacia
+                    abajo y de izquierda a derecha.
+                    La cascada es el mecanismo que tiene el navegador web para ir aplicando
+                    los estilos y en base a esto toma en cuenta lo siguiente en este orden:
+                </p>
+                <ol>
+                    <li>
+                        <h4>El origen del codigo</h4>
+                        Es decir de donde viene el codigo, y hay 3 posible origenes
+                        (conforme se mencionan a continuacion es como el navegador los va
+                        aplicando):
+                        <ul>
+                            <li>
+                                <h5>user agent stylesheet</h5>
+                                El usert agent stylesheet son los estilos que por defecto
+                                <i>(by default)</i> le va aplicando cada navegador a las
+                                etiquetas HTML.
+                                <br>
+                                Cada navegador aplica sus propios estilos css por defecto.
+                            </li>
+                            <li>
+                                <h5>Personalizaciones de usuario</h5>
+                                Todas las personalizaciones que nosotros como usuarios de
+                                nuestra propia computadora le hacemos al navegador o al
+                                sistema operativo, por ejemplo aumetar el zoom del
+                                navegador, poner un tema oscuro o claro al navegador, etc.
+                            </li>
+                            <li>
+                                <h5>Los estilos del autor</h5>
+                                Es el codigo CSS que nosotros escribimos en nuestras hojas
+                                de estilo.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <br>
+
+            <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+
+            <br>
+            <li>
+                <h3 id="especificidad">La especificidad del selector</h3>
+                <p> La especificidad es ver cual de los selectores que estan aplicando un
+                    estilo a un mismo elemento tienen mas peso (o especificidad) para css ,
+                    el que mas peso o valor tenga, es el que al final quedara y aplicara el
+                    estilo al elemento y sobre escribira a los demas.
+                    El elemento que mas especificidad tiene en las hojas de estilo es
+                    cascada es el atributo style.
+                </p>
+
+                <h4>Calculo de la especificidad</h4>
+                <p>La especificidad es el peso que tiene un selector cuando hay conflicto de
+                    estilos y se calcula de la siguiente forma.</p>
+                <ul>
+                    <li>Etiquetas y pseudoelementos--------------- 0,0,0,1</li>
+                    <li>Clases, atributos y pseudoclases---------- 0,0,1,0</li>
+                    <li>Identificadores----------------------------------- 0,1,0,0</li>
+                    <li>Estilos en línea---------------------------------- 1,0,0,0</li>
+                    <li>La palabra !important---- Rompe la especificidad</li>
+                </ul>
+
+                <h4>Practicando cascada y especificidad</h4>
+                <blockquote id="cita-marco" class="cita-marco" style="background-color: rebeccapurple;">
+                    "Se tolerante con los demás y estricto con tigo mismo." - <cite>Marco Aurelio</cite>
+                </blockquote>
+            </li>
+            <li>
+                <h3 id="herencia">La herencia</h3>
+                <p>
+                    Hace referencia a que los hijos heredan caracteristicas de sus padres,
+                    basicamente es la capacidad de un selector de obtener (heredar) los
+                    valores de sus ansestros más cercanos (padres, abuelos, bisabuelos,
+                    tatarabuelos), para aplicarla se usa el valor <b>inherit</b>, si
+                    queremos evitarla podemos asignar otro valor o inicializar la propiedad
+                    en cuestión con el valor <b>initial</b>.
+                    <br>
+                    <b><u>OJO:</u></b> Hay ciertas propiedades que no se heredan como por
+                    ejemplo los bordes, el fondo, etc.
+                </p>
+                <h4>Practicando herencia</h4>
+                <blockquote id="cita-marco" class="cita-marco">
+                    "Se tolerante con los demás y estricto con tigo mismo." - <cite>Marco Aurelio</cite>
+                </blockquote>
+
+                <a href="https://web.dev/learn/css/inheritance/#which-properties-are-inheritable" target="_blank">Enlace
+                    a documentacion de propiedades CSS que aplican la herencia.</a>
+
+            </li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="reseteo-estilos">
+        <h2>Reseteo y Normalización de estilos</h2>
+        <p>
+            Para inicializar a cero todos los estilos del navegador podemos utilizar una
+            herramienta u hoja de reseteo de las cuales hay varias como estas:
+        </p>
+
+        <p>
+        <h3><a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a></h3>
+        Esta hoja solo resetea algunos estilos, por lo que ya no es muy recomendado su uso.
+        </p>
+
+        <p>
+        <h3><a href="https://necolas.github.io/normalize.css/">Normalize.css</a></h3>
+        Es una libreria que busca normalizar, estandarizar o inicializar los estilos de
+        los navegadores y es la mas recomendada para usar.
+        </p>
+        <p>
+            <b><u>NOTA:</u></b> Como las hojas de estilos <a href="https://meyerweb.com/eric/tools/css/reset/"
+                target="_blank">Reset
+                CSS</a> y <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a> resetean
+            y normalizan las etiqueta HTML por defecto, lo ideal (debido a la cascada) es que
+            primero se apliquen estos estilos y despues nuestra hoja particular de estilos,
+            por lo que al llamarlas dentro del elemento "head" de nuestro documento HTML con
+            la etiqueta "link", deben ir primero (de arriba hacia a bajo) que nuestra hoja particular de estilos.
+        </p>
+
+
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="prefijos-navegadores">
+        <h2>Prefijos de los navegadores</h2>
+        <p>
+            Son unos prefijos que tenemos que anteponer a veces a las herramientas, por ejemplo:
+        <ul>
+            <li>Prefijo para navegadores de Microsoft (Internet Explorer y Microsoft Edge):
+                <code><b>-ms-</b></code>
+            </li>
+            <li>Prefijo para navegador Firefox: <code><b>-moz-</b></code></li>
+            <li>Prefijo para los demas navegadores, Google Chrome, Safari, Brave, Android,
+                iOs y nuevas versiones de Opera: <code><b>-webkit-</b></code>
+            </li>
+            <li>Prefijo para versiónes antiguas, pre-Webkit, del navegador Opera: <code><b>-o-</b></code></li>
+        </ul>
+        </p>
+
+        <p>
+            <b>Enlaces a documentacion de prefijos de los navegadores</b>
+            <br>
+            <a href="https://autoprefixer.github.io/" target="_blank">Autoprefixer CSS</a>
+            <br>
+            <a href="https://caniuse.com/" target="_blank">Can i use</a>
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <hr>
+    </article>
+
+    <article id="enlaces">
+        <h2>Enlaces, links de referencia y documentacion de css</h2>
+
+        <a href="https://es.wikipedia.org/wiki/CSS" target="_blank">Wikipedia</a>
+        <br>
+        <a href="https://www.w3.org/html/logo/" target="_blank">W3</a>
+        <br>
+        <a href="https://www.w3.org/standards/webdesign/htmlcss.html" target="_blank">W3</a>
+        <br>
+        <a href="https://www.w3.org/TR/css-2020/" target="_blank">W3</a>
+        <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN (Motzilla Developed Network)</a>
+        <br>
+        <br>
+        <a href="https://cssreference.io/" target="_blank">CSS reference</a>
+        <br>
+        <a href="https://caniuse.com/" target="_blank">Can i use</a>
+        <br>
+        <a href="https://codeguide.co/" target="_blank">Guía de buenas practicas para escribir HTML y CSS: Code
+            Guide</a>
+        <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes" target="_blank"> Pseudo-clases</a>
+        <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements" target="_blank">Pseudoelementos</a>
+
+        <br>
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">🔼 Inicio</a>
+        <br>
+        <hr>
+    </article>
+
+</body>
+
+</html>

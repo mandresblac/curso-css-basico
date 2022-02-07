@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+
+    <style>
+        a:link {
+            color: blue;
+        }
+
+        /* Enlaces no visitados, color blue */
+        a:visited {
+            color: purple;
+        }
+
+        /* Enlaces visitados, color purple*/
+        a:hover {
+            background: yellow;
+        }
+
+        /* El usuario esta sobre el enlace, color yellow */
+        a:active {
+            color: red;
+        }
+
+        /* Enlaces activos, color lima */
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo uso pseudoclases :link, :visited, :hover y :active</h1>
+    <h2>Orden correcto para uso de pseudoclases :link — :visited — :hover — :active</h2>
+    <p>Para darle un estilo apropiado a los enlaces, coloque la regla :active después de todas las demás reglas
+        relacionadas con el enlace, tal como lo define el orden LVHA: :link — :visited — :hover — :active.</p>
+
+    <a href="#">Este enlace cambiará a color red mientras hace clic en él.</a>
+    <br>
+    <br>
+    <a href="index.html#pseudoclases-posicion" class="volver-inicio">🔼 Volver atras</a>
+</body>
+
+</html>
