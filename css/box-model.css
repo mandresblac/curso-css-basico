@@ -253,7 +253,20 @@ html {
 }
 
 
+/* -------------------------CENTRADO DE CAJAS-------------------------- */
 
+.sitio-web {
+    border: thin solid black;
+    background-color: thistle;
+    width: 800px;
+    height: 1000px;
+    padding: 16px;
+    /* text-align: center; Centra solo el contenido de la caja (osea el texto) dentro de la misma caja  */
+
+    /* La manera de centrar una caja o elemento HTML (no su contenido) es darle un valor "auto"al margin-left y al margin-right. */
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
