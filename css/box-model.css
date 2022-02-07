@@ -91,10 +91,58 @@ Elementos o cajas de bloque:
 
 .caja-bloque{
     margin: 32px;
+    display: block;
 }
 
 .caja-linea {
     margin: 48px;
+    display: inline;
 }
+
+
+/* -------------------PROPIEDAD DISPLAY-------------------- */
+
+/* 
+La propiedad display tiene los siguientes valores:
+- inline
+- block
+- inline-block: Se comporta como un elemento de línea y acepta modificar sus dimensiones (ancho y alto) como un elemento de bloque.
+- none: Oculta el elemento, no lo visualiza pero OJO si lo carga.
+- table: Para tablas.
+- list-item: Para elementos de lista ul y ol
+- flex: Ver curso de flexbox.
+- grid: Ver curso de grid css.
+*/
+
+.caja-none,
+.caja-linea-bloque,
+.caja-hidden {
+    background: darkolivegreen;
+    color: white;
+    width: 600px;
+    height: 300px;
+    border: medium solid black;
+}
+
+.caja-linea-bloque {
+    display: inline-block;
+}
+
+.caja-none {
+    display: none;
+}
+
+
+/* -------------------PROPIEDAD VISIBILITY (VISIBILIDAD)-------------------- */
+
+/* 
+Tiene dos valores:
+visible: Que muestra el elemento.
+hidden: Oculta el elemento, pero conserva el espacio que este ocupa.
+*/
+.caja-hidden {
+    visibility: visible;
+}
+
 
 

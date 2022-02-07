@@ -30,7 +30,9 @@
             <li><a href="box-model.html#diferencia-elementos-linea-bloque">Diferencia entre elementos de línea
                     Vs elementos de bloque</a>
             </li>
-            <li><a href="box-model.html#propiedad-display">Propiedad display</a></li>
+            <li><a href="box-model.html#propiedad-display">Propiedad display (Visualización)</a>
+            </li>
+            <li><a href="box-model.html#propiedad-visibility">Propiedad visibility (Visibilidad)</a></li>
 
         </ol>
 
@@ -193,7 +195,7 @@
                 como abajo.</li>
         </ul>
 
-        <h4>Ejmplos:</h4>
+        <h4>Ejemplos:</h4>
         <br>
         <span class="caja-linea">Esto es una caja de línea</span>
         <span>Esto es una span</span>
@@ -212,10 +214,96 @@
     </article>
 
     <article id="propiedad-display">
-        <h2>Propiedad display</h2>
+        <h2>Propiedad display (Visualización)</h2>
+        <p>La propiedad display es la propiedad que nos va a permitir mostrar nuestras
+            cajas, es la propiedad que le dice al navegador como debe comportarse un
+            elemento HTML a CSS, es decir como se va a visualizar en el navegador
+        </p>
+        <p>
+            La propiedad display tiene los siguientes valores:
+        <ul>
+            <li><b>inline</b></li>
+            <li><b>block</b></li>
+            <li><b>inline-block:</b> Se comporta como un elemento de línea y acepta
+                modificar sus dimensiones (ancho y alto) como un elemento de bloque.
+            </li>
+            <li><b>none:</b> Oculta el elemento, no lo visualiza pero OJO si lo carga.</li>
+            <li><b>table:</b> Para tablas.</li>
+            <li><b>list-item:</b> Para elementos de lista ul y ol</li>
+            <li><b>flex:</b> Ver curso de flexbox.</li>
+            <li><b>grid:</b> Ver curso de grid css.</li>
+        </ul>
+        </p>
+        <h4>Ejemplos:</h4>
 
+        <div class="caja-none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere nam minus? Quidem maxime dolores
+            harum rerum ea, officia qui vel fuga doloremque ab voluptates porro deserunt adipisci! Nemo, minus.
+        </div>
+        <span class="caja-linea-bloque">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quia cum iusto ratione obcaecati
+            consectetur provident non eveniet, magnam dolorum porro quisquam vitae nulla voluptate sequi fuga asperiores
+            iure voluptas!
+        </span>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
 
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ol>
 
+        <table>
+            <tr>
+                <td>Celda 1</td>
+                <td>Celda 2</td>
+                <td>Celda 3</td>
+            </tr>
+            <tr>
+                <td>Celda 4</td>
+                <td>Celda 5</td>
+                <td>Celda 6</td>
+            </tr>
+            <tr>
+                <td>Celda 7</td>
+                <td>Celda 8</td>
+                <td>Celda 9</td>
+            </tr>
+        </table>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+    <article id="propiedad-visibility">
+        <h2>Propiedad visibility (Visivilidad)</h2>
+        <p>Oculta el elemento pero conserva el espacio que este ocupa, es como poner en
+            opacidad cero al elemento, y tiene dos valores:
+        <ul>
+            <li><b>visible</b>: Que muestra el elemento.</li>
+            <li><b>hidden</b>: Oculta el elemento, pero conserva el espacio que este ocupa.</li>
+        </ul>
+        </p>
+
+        <h4>Ejemplos:</h4>
+
+        <div class="caja-none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere nam minus? Quidem maxime dolores
+            harum rerum ea, officia qui vel fuga doloremque ab voluptates porro deserunt adipisci! Nemo, minus.
+        </div>
+        <div class="caja-hidden">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere nam minus? Quidem maxime dolores
+            harum rerum ea, officia qui vel fuga doloremque ab voluptates porro deserunt adipisci! Nemo, minus.
+        </div>
+
+        <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
         <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
         <hr>
