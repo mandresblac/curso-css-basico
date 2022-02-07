@@ -35,8 +35,15 @@
             <li><a href="box-model.html#propiedad-visibility">Propiedad visibility (Visibilidad)</a>
             </li>
             <li><a href="box-model.html#propiedad-overflow">Propiedad overflow</a></li>
-            <li><a href="box-model.html#tamano-caja">Tamaño de las cajas</a></li>
-
+            <li><a href="box-model.html#tamano-caja">Tamaño de las cajas (Box-sizing)</a></li>
+            <li><a href="box-model.html#propiedades-float-clear">Propiedades float & clear</a>
+            </li>
+            <li>
+                <a href="box-model.html#colapso-margenes-verticales">Colapso de margenes verticales</a>
+            </li>
+            <li><a href="box-model.html#adicion-margenes-horizontales">Adición de márgenes horizontales</a>
+            </li>
+            <li><a href="box-model.html#centrado-cajas">Centrado de Cajas</a></li>
         </ol>
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
@@ -337,7 +344,171 @@
     </article>
 
     <article id="tamano-caja">
-        <h2>Tamaño de las cajas</h2>
+        <h2>Tamaño de las cajas (Box-sizing)</h2>
+        <p>
+            La propiedad box-sizing eefine cómo se calculan el ancho y el alto de un
+            elemento (si incluyen el relleno y los bordes o no), nos va a decir desde
+            donde va a empezar a considerar el tamaño de la caja.
+        </p>
+        <p>
+            A traves de esta propiedad se le dice al navegador como tiene que calcular el
+            tamaño interno de la caja y tiene dos valores: content-box (que es el valor por
+            defecto de la caja) y border-box y se aplican así:
+        <ul>
+            <li>box-sizing: content-box;
+                <p>El ancho y la altura del elemento solo se aplican al contenido del
+                    elemento. Por ejemplo, este elemento tiene</p>
+                <ul>
+                    <li><code>border-width: 12px</code></li>
+                    <li><code>padding: 30px</code></li>
+                    <li><code>width: 200px</code></li>
+                </ul>
+                <p>El ancho completo es 24px + 60px + 200px = <b>284px</b>.</p>
+                <p>El contenido tiene el ancho definido. La caja se acomoda para esas dimensiones.</p>
+            </li>
+            <li>box-sizing: border-box;
+                <p>El ancho y la altura del elemento se aplican a todas las partes del
+                    elemento: el contenido , el relleno y los bordes.
+                    Por ejemplo, este elemento tiene</p>
+
+                <ul>
+                    <li><code>border-width: 12px</code></li>
+                    <li><code>padding: 30px</code></li>
+                    <li><code>width: 200px</code></li>
+                </ul>
+                <p>El ancho completo es de 200px , pase lo que pase.</p>
+                <p>La caja tiene el ancho definido. El contenido se adapta a esas
+                    dimensiones y termina siendo 200px - 60px - 24px = <b>116px</b> .
+                </p>
+            </li>
+        </ul>
+        </p>
+        <ul>Enlace a documentacion:
+            <li>Sobre la propiedad box-sizing: <a href="https://cssreference.io/property/box-sizing/"
+                    target="_blank">cssreference</a>.
+            </li>
+            <li>
+                Articulo de <a href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">Paul
+                    Irish</a> sobre la
+                poropiedad box-sizing y el tamaño de caja.
+            </li>
+        </ul>
+
+
+        <h4>Ejemplos</h4>
+        <div class="box-sizing-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, at natus commodi, voluptas eum corrupti
+            odio aut reprehenderit iure, dolorum animi! Voluptatum labore, eaque vel sed repellendus voluptas nesciunt
+            earum?
+        </div>
+        <div class="box-sizing-border">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, at natus commodi, voluptas eum corrupti
+            odio aut reprehenderit iure, dolorum animi! Voluptatum labore, eaque vel sed repellendus voluptas nesciunt
+            earum?
+        </div>
+        <article class="container-col-3">
+            <section class="item">Seccion 1</section>
+            <section class="item">Seccion 2</section>
+            <section class="item">Seccion 3</section>
+        </article>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+    <article id="propiedades-float-clear">
+        <h2>Propiedades float & clear</h2>
+
+        <p>La propiedad float nos va a permitir flotar hacia la izquierda o hacia la
+            derecha elementos.
+        </p>
+        <p>Cuando flotamos un elemento sale de la dicposición natural del elemento HTML</p>
+        <p>
+            <b><u>Nota</u>:</b>Al dia de hoy se considera una mala practica trabajar con
+            esta propiedad ya que como los elementos flotan, se genera un problema de
+            superposicion con los siguientes elementos que siguen y que no flotan.
+        </p>
+        <p>
+            Enlace a <a href="https://960.gs/" target="_blank">960 grid system</a> que es
+            una biblioteca de CSS enfocada a la maquetación de una página web que utilizaba
+            la propiedad float pero que hoy en dia ya es obsoleta y no se usa, fue
+            reemplazada por frameworks como Bootstrap.
+            <br>
+            Enlace documentacion propiedades <a href="https://cssreference.io/property/float/"
+                target="_blank"><b>float</b></a> y
+            <a href="https://cssreference.io/property/clear/" target="_blank"><b>clear</b></a> en el sitio web
+            cssreference.io
+        </p>
+
+        <h4>Ejemplos</h4>
+
+        <article class="container-floats">
+            <section class="float-right">Este elemento flota a la derecha</section>
+            <section class="float-left">Este elemento flota a la izquierda</section>
+        </article>
+        <div class="clearfix"></div>
+        <article>
+            <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+                excepturi aperiam quos reprehenderit assumenda laboriosam odit impedit
+                voluptatum cum illo, similique quo soluta adipisci asperiores iusto rem.
+                Aut, atque mollitia.
+            </section>
+        </article>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+    <article id="colapso-margenes-verticales">
+        <h2>Colapso de margenes verticales</h2>
+        <p>El colapso de margenes se da unicamente en top y bottom no en los horizontales
+            (right y left).
+        </p>
+        <p>La solución a este problema de las margenes verticales es utilizar solo una
+            propiedad para todos los elementos HTML, o margin top o margin bottom pero nunca
+            utilizar al mismo tiempo ambas propiedades (margin top, margin bottom) porque se va apresentar superposicion
+            de margenes en los elementos.</p>
+
+        <h4>Ejemplos:</h4>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatem
+            aspernatur sit sapiente! Cum itaque alias ipsam, in aliquid iste? Voluptates,
+            dolorem! Qui eveniet commodi accusamus assumenda dolorum eius placeat?
+        </div>
+        <article class="margin-collapse">
+            <section>Sección 1</section>
+            <section>Sección 2</section>
+        </article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+    <article id="adicion-margenes-horizontales">
+        <h2>Adición de márgenes horizontales</h2>
+        <p>
+            En los margenes horizontales no sucede el colapso como en los margenes verticales
+        </p>
+
+        <h4>Ejemplos:</h4>
+
+        <article class="margin-collapse">
+            <section>Sección 1</section>
+            <section>Sección 2</section>
+            <section><span>Span 1</span><span>Span 2</span><span>Span 3</span></section>
+        </article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="box-model.html#inicio-modelo-caja" class="volver-inicio">🔼 Ir a inicio Modelo de caja</a>
+        <hr>
+    </article>
+
+    <article id="centrado-cajas">
+        <h2>Centrado de Cajas</h2>
 
 
 

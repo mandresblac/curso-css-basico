@@ -160,6 +160,98 @@ hidden: Oculta el elemento, pero conserva el espacio que este ocupa.
 }
 
 
+/* -------------------------TAMAÑO DE LAS CAJAS (BOX-SIZING)-------------------------- */
+
+.box-sizing-content,
+.box-sizing-border {
+    background-color: deepskyblue;
+    box-sizing: content-box;
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    border: thick solid black; /* el valor thick son 5 pixeles */
+    /* la caja tiene width 500px + padding de 10px en los 4 lados(top, right, bottom y left):
+    widht 500 + 10 + 10 + 5 + 5= 530
+    height 250 + 10 + 10 + 5 + 5 = 280
+    */
+}
+
+.box-sizing-border {
+    box-sizing: border-box;
+}
+
+.container-col-3 {
+    background-color: burlywood;
+    width: 600px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.container-col-3 > * {
+    box-sizing: border-box; /* Border-box significa que empiece a contar el tamaño de la caja desde el borde, es decir que incluya todo lo que esta dentro de la caja content box, padding y border*/
+    width: 198px;
+    border: thin solid red;
+    padding: 10px;
+    float: left; /* Flota todos los elementos hijos a la izquierda */
+}
+
+
+/* Esto siempre debe ir al inicio de la hoja de estilos de css asi se resetea el tamaño de todas las cajas de todos  los elementos HTML que tenga en el documento para que no empiesen desde el contenido sino desde el borde */
+/* Articulo de Paul Irish sobre la poropiedad box-sizing */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* -------------------------PROPIEDADES FLOAT & CLEAR-------------------------- */
+
+.container-floats {
+    background-color: cornflowerblue;
+
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+/* -------------------------COLAPSO DE MARGENES VERTICALES-------------------------- */
+
+.margin-collapse {
+    background-color: skyblue;
+}
+
+.margin-collapse section{
+    border: thin solid black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* -------------------------ADICIÓN DE MÁRGENES HORIZONTALES-------------------------- */
+
+.margin-collapse span {
+    display: inline-block; /* Con display: inline-block; se comporta como un elemento de línea y acepta modificar sus dimensiones (ancho y alto) como un elemento de bloque. */
+    margin-right: 16px;
+    border: thin solid black;
+    margin-left: 16px;
+}
+
 
 
 
