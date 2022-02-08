@@ -27,6 +27,20 @@
             <li>
                 <a href="positions.html#posicionamiento-static">Posicionamiento static</a>
             </li>
+            <li><a href="positions.html#posicionamiento-relative">Posicionamiento relative</a>
+            </li>
+            <li>
+                <a href="positions.html#posicionamiento-absolute">Posicionamiento absolute</a>
+            </li>
+            <li>
+                <a href="positions.html#posicionamiento-fixed">Posicionamiento fijo (fixed)</a>
+            </li>
+            <li>
+                <a href="positions.html#posicionamiento-sticky">Posicionamiento sticky o pegajoso</a>
+            </li>
+            <li>
+                <a href="positions.html#propiedad-z-index">Propiedad z-index</a>
+            </li>
         </ol>
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
@@ -54,7 +68,7 @@
             <dt><b>float:</b></dt>
             <dd>Convierte un elemento en flotante desplazandolo hasta la zona más a la
                 izquierda o más a la derecha de la posición en la que originalmente se
-                encontraba.
+                encuentra.
             </dd>
 
             <dt><b>clear:</b></dt>
@@ -99,9 +113,140 @@
 
     <article id="posicionamiento-static">
         <h2>Posicionamiento static</h2>
+        <p>Static es el valor por defecto y significa que el elemento respeta el flujo del
+            elemento HTML, por lo que no se puede mover o posicionar.
+        </p>
+        <p>
+            Todos los elementos en el flujo del documento por defecto tienen <b>position static</b>.
+        </p>
+
+
+        <h4>Ejemplos:</h4>
+        <div class="static">Caja estática</div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
+        <hr>
+    </article>
+
+    <article id="posicionamiento-relative">
+        <h2>Posicionamiento relative</h2>
+
+        <p>El posicionamiento relativo (relative) hace que el elemento conserve sus
+            dimensiones y posición original en el flujo del documento. Si se mueve toma como
+            referencia su posición original.
+        </p>
+        <p>Cuando se aplica la propieded <code>position: relative</code> en apariencia no
+            pasa nada, visualmente queda en su ligar pero internamente si cambia.
+        </p>
+        <p>
+            Las coordenadas de un position relative estan en relación a su posición inicial.
+        </p>
+        <p>
+            Si aplicamos a un elemento la propiedad <code>top: 50px;</code> este se va a
+            alejar 50px del margen superior (top), es decir, se mueve hacia abajo (bottom).
+        </p>
+        <p>
+            Si aplicamos a un elemento la propiedad <code>left: 50px;</code> este se va a
+            alejar 50px del margen izquierdo (left), es decir se mueve hacia la derecha
+            (right)
+        </p>
+
+        <h4>Ejemplos:</h4>
+        <div class="relative">Caja relativa</div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
+        <hr>
+    </article>
+
+    <article id="posicionamiento-absolute">
+        <h2>Posicionamiento absolute</h2>
+        <p>El elemento pierde sus dimensiones y posisión original en el flujo del documento.
+            Si se mueve puede tomar como referencia 2 elementos:
+        </p>
+        <ol>
+            <li>El primer ancestro con posicionamiento relativo.</li>
+            <li>
+                Si no encuentra un ancestro relativo, se mueve respecto del documento HTML.
+            </li>
+        </ol>
+        <p>Las coordenadas en un <b>position absolute</b> estan dadas en relación al
+            ansestro o padre mas cercano que este posicionado con relative, absolute o fixed.
+        </p>
+
+        <h4>Ejemplos:</h4>
+        <div class="absolute">Caja absoluta</div>
+        <section class="relative-parent">
+            <div class="absolute-child">
+                Caja absoluta con ancestro relativo
+            </div>
+        </section>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
+        <hr>
+    </article>
+
+    <article id="posicionamiento-fixed">
+        <h2>Posicionamiento fijo (fixed)</h2>
+        <p>
+            El elemento pierde sus dimensiones y posición original en ele flujo del
+            documento. Si se mueve toma como referencia el documento HTML y queda fijo en la
+            posición, cuando el scroll se mueva el elemento no lo hará, que da fijo.
+        </p>
+        <p><b>El elemento se queda pegado cuando se hace scroll, no se mueve</b>.</p>
+        <p>las coordenadas siempre seran relativas a la ventana del navegador o viewport.</p>
 
 
 
+        <h4>Ejemplos:</h4>
+        <div class="fixed">Caja fija</div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
+        <hr>
+    </article>
+
+    <article id="posicionamiento-sticky">
+        <h2>Posicionamiento sticky o pegajoso</h2>
+        <p>Es una combinación de posicionamiento relative y fixed, para este posicionamiento
+            las propiedades de top, lef, bottom y right no mueven el elemento, sino que
+            sirven como punto de referencia de donde tiene que cambiar el comportamiento
+            del elemento, mientras no lleguen a ese valor el elemento se comporta como
+            relative, cuando llega a ese valor se convierte en fixed.
+        </p>
+        <p>Para que este comportamiento funcione el elemento sticky debe ser hijo directo
+            del body o su elemento contenedor debe tener dimensiones definidas (width, heigh)
+            establecidas por nosotros y sólo séra sticky dentro de las dimensiones de su
+            contenedor padre.
+        </p>
+
+        <h4>Ejemplos:</h4>
+
+        <div class="sticky">Caja pegajosa</div>
+
+        <section class="sticky-parent">
+            <div class="sticky-child">caja pegajosa como hijo</div>
+        </section>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
+        <hr>
+    </article>
+
+    <article id="propiedad-z-index">
+        <h2>Propiedad z-index</h2>
+
+
+
+
+        <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
         <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
         <hr>
