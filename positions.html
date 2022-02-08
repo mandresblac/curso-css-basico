@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posicionamiento en css</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/positions.css">
 
     <style>
         /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
@@ -20,8 +22,88 @@
 
     <article id="temario-posicionamiento-css">
         <h2>Temario posicionamiento css</h2>
+        <ol type="a">
+            <li><a href="positions.html#que-es-posicionamiento">¿Que es el posicionamiento en css?</a></li>
+            <li>
+                <a href="positions.html#posicionamiento-static">Posicionamiento static</a>
+            </li>
+        </ol>
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <hr>
+    </article>
+
+    <article id="que-es-posicionamiento">
+        <h2>¿Que es el posicionamiento en css?</h2>
+
+        <p>El posicionamiento en css tiene que ver con la propiedad <b>FLOAT</b> y
+            <b>POSITION</b> que nos van a permitir modificar la posición natural de
+            cualquier elemento del documento HTML.
+        </p>
+        <p>El navegador coloca cada elemento teniendo en cuenta el orden en el que aparece
+            en el documento y su tipo de visualización dependiendo si es un elemento de
+            línea o de bloque.
+        </p>
+
+        <p>Con la propiedad <b>FLOAT</b> y <b>POSITION</b> podemos modificar este
+            comportamiento.
+        </p>
+
+        <h3>Propiedades de elementos flotantes (float)</h3>
+        <dl>
+            <dt><b>float:</b></dt>
+            <dd>Convierte un elemento en flotante desplazandolo hasta la zona más a la
+                izquierda o más a la derecha de la posición en la que originalmente se
+                encontraba.
+            </dd>
+
+            <dt><b>clear:</b></dt>
+            <dd>Para limpiar todos los efectos que genera la flotación y podemos limpiar al
+                lado derecho (right), al lado izquierdo (left), o a ambos lados que es both.
+            </dd>
+        </dl>
+
+        <h3>Propiedades de elementos positions</h3>
+        <p>La propiedad positions tiene cinco posibles valores:</p>
+        <ul>
+            <li><b>static (valor por default)</b>: Es el flujo natural de como el navegador
+                interpreta el posicionamiento de los elementos HTML.
+            </li>
+            <li><b>relative</b> o relativo.</li>
+            <li><b>absolute</b> o absoluto.</li>
+            <li><b>fixed</b> o fijo.</li>
+            <li><b>sticky</b>o pegajoso.</li>
+        </ul>
+
+        <p>Cuando activamos cualquiera de los cuatro valores (relative, absolute, fixed o
+            stciky) diferentes a static (que es el valor por default) de la propiedad
+            position, para mover los elementos se activan las siguientes cinco propiedades:
+        </p>
+        <ul>
+            <li><b>top</b> (vertical - eje Y).</li>
+            <li><b>bottom</b> (vertical - eje Y).</li>
+            <li><b>left</b> (horizontal - eje X).</li>
+            <li><b>right</b> (horizontal - eje X).</li>
+            <li><b>z-index</b> (profundidad - eje Z).</li>
+        </ul>
+        <p><b><u>NOTA</u></b>: Estos cinco valores no funcionan con el valor de static.</p>
+        <p>
+            Las propiedades top y left siempre van a tener preferencia por sobre las
+            propiedades bottom y right respectivamente.
+        </p>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
+        <hr>
+    </article>
+
+    <article id="posicionamiento-static">
+        <h2>Posicionamiento static</h2>
+
+
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="positions.html" class="volver-inicio">🔼 Ir a inicio posicionamiento css</a>
         <hr>
     </article>
 

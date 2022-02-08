@@ -19,9 +19,19 @@ body {
 }
 
 h1 {
-    border-width: 3px;
-    border-style: solid;
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
 }
+
+h2 {
+    color: brown;
+    background-color: rgb(129, 200, 218);
+    text-align: center;
+    font-family: sans-serif;
+}
+
 
 a{
     text-decoration: none;
@@ -32,6 +42,8 @@ a{
     border-width: 3px;
     border-style: solid;
 }
+
+/* --------------------------------------------------------------------------------------- */
 
 .ejemplo2 {
     width: 400px;
