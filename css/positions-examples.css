@@ -1,0 +1,36 @@
+/* Esto siempre debe ir al inicio de la hoja de estilos de css asi se resetea el tamaño de todas las cajas de todos  los elementos HTML que tenga en el documento para que no empiesen desde el contenido sino desde el borde */
+/* Articulo de Paul Irish sobre la poropiedad box-sizing */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: brown;
+    background-color: rgb(129, 200, 218);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* -------------------Ejercicios practicos de posicionamiento en css------------------ */
+
+
+/* -----------------------------Cabecera fixed Vs Cabecera sticky--------------------- */
