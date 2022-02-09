@@ -17,6 +17,10 @@ El Bloque de declaracion esta definido por las llaves, dentro des aeas llaves va
 
 ejemplo de declaracion CSS o regla de definicion de hojas de estilo en cascada CSS: */
 
+body {
+    margin: 0;
+}
+
 h1{
     color: yellow;
     background-color: black;
@@ -417,6 +421,16 @@ basicamente es la capacidad de un selector de obtener (heredar) los valores de s
 -webkit- (Chrome, Safari, nuevas versiones de Opera, casi todos los navegadores iOS (incluyendo Firefox for iOS); basicamente, cualquier navegador basado en WebKit)
 */
 
+
+/* --------------MÁRGENES NEGATIVOS--------------- */
+
+.box {
+    background-color: sandybrown;
+    padding: 20px;
+    margin-top: 50px;
+    /* margin-left: -50px; */
+    padding-right: -30px;
+}
 
 
 

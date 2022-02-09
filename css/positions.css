@@ -11,6 +11,10 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    margin: 0;
+}
+
 h1 {
     color: yellow;
     background-color: black;
