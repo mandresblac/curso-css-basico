@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida en CSS</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/units.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio-unidades-medida">Unidades de medida en CSS</h1>
+
+    <article id="temario-unidades-medida">
+        <h2>Temario unidades de medida en CSS</h2>
+        <ol type="a">
+            <li><a href="units.html#introduccion-unidades-medida">Introduccion</a></li>
+            <li><a href="units.html#pixels">Pixeles</a></li>
+            <li><a href="units.html#ems">Unidades EMs</a></li>
+            <li><a href="units.html#rems ">Unidades REMs</a></li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <hr>
+    </article>
+
+    <article id="introduccion-unidades-medida">
+        <h2>Introduccion</h2>
+
+        <p>Las unidades de medida se pueden clasificar en dos:
+        <ol>
+            <li>
+                <h3>Absolutas</h3>
+                Son unidades que su valor no cambia, es decir son unidades del mundo real, como por ejemplo:
+                <ul>
+                    <li><b>pc</b></li>
+                    <li><b>Centimetros</b>: cm</li>
+                    <li><b>milimetros</b>: mm</li>
+                    <li><b>Pulgadas</b>: in</li>
+                    <li><b>Q</b></li>
+                    <li><b>Puntos</b>: pt (1/72in)</li>
+                    <li><b>Pixeles</b>: px (1/96in)</li>
+                </ul>
+
+            </li>
+            <li>
+                <h3>Relativas</h3>
+                Se le llama relativas porque su valor es relativo a un contexto, y hay tres
+                tipos de unidades de medida:
+                <ol>
+                    <li>
+                        Las que estan basadas en el tamaño de la fuente que tenga el
+                        elemento al que se le este aplicando, como:
+                        <ul>
+                            <li>
+                                <b>em</b>: Basada en la anchura de la "m" de la fuente del
+                                elemento
+                            </li>
+                            <li>
+                                <b>rem</b>: Basada en la anchura de la "m" de la fuente del
+                                elemento raíz (html).
+                            </li>
+                            <li>
+                                <b>ex</b>: Basada en la altura de la "x" de la fuente del
+                                elemento.
+                            </li>
+                            <li>
+                                <b>ch</b>: Basada en la anchura del "0" de la fuente del
+                                elemento.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Al tamaño del contenedor como los porcentajes %.
+                    </li>
+
+                    <li>
+                        Al tamaño del viewport, (El viewport es el area visible de la
+                        pantalla dode se renderiza el contenido HTML), y son:
+                        <ul>
+                            <li>
+                                <b>vw</b>: Hace referencia al ancho del viewport y se le
+                                pueden asignar valores de 1 a 100.
+                            </li>
+                            <li>
+                                <b>vh</b>: Hace referencia a la altura del viewport y se le puede asignar valores de 1 a
+                                100.
+                            </li>
+                            <li>
+                                <b>vmax</b>: Entre vw y vh toma el que tenga mayor valor.
+                            </li>
+                            <li>
+                                <b>vmin</b>: entre vw y vh toma el que tenga menor valor.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>
+                    Elace a pagina <a href="http://pxtoem.com/" target="_blank"><b>pxtoem.com</b></a> para realizar
+                    conversiones de unidades de medida.
+                </p>
+
+            </li>
+        </ol>
+        </p>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="units.html#inicio-unidades-medida" class="volver-inicio">🔼 Ir a inicio unidades de medida</a>
+        <hr>
+    </article>
+
+    <article id="pixels">
+        <h2>Pixeles</h2>
+        <p>Los pixeles son una noventa y seisaba parte del mundo real</p>
+        <p>
+            En la medida de lo posible no es aconsebale utilizar pixeles sino unidades de
+            medida relativas, por el llamado <b>responsive web desing</b> donde el contenido
+            se tiene que ir adaptando al ancho de pantalla del dispositivo que lo consuma, y
+            los pixels no permiten esto porque son unidades de medida absolutas.
+        </p>
+        <h3>Ejemplos:</h3>
+        <div class="pixels">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, ex minus?
+            Eveniet magnam rerum vero cum? Voluptates doloribus eligendi modi ad nulla
+            corrupti atque saepe! Dolores sapiente explicabo possimus perferendis.
+        </div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="units.html#inicio-unidades-medida" class="volver-inicio">🔼 Ir a inicio unidades de medida</a>
+        <hr>
+    </article>
+
+    <article id="ems">
+        <h2>Unidades EMs</h2>
+        <p>
+            Los <b>em</b> son unidades de medida que estan basadas en el tamaño tipografico,
+            es decir en el tamaño de la fuente.
+        </p>
+        <p>
+            Cuando se utilicen <b>ems</b> hay que tener en cuenta que tamaño de fuente
+            (font-size) tiene asignado el elemento contenedor padre.
+            Los ems siempre van a hacer referencia al tamaño de fuente (es decir a la
+            propiedad font-size), que tenga el contenedor padre que contiene un elemento.
+        </p>
+        <p>
+            <b><u>NOTA</u></b>: El tamaño por defecto que los navegadores asignan a la
+            fuente es de 16px que equivle a 1.000 em.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="ems">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, ex minus?
+            Eveniet magnam rerum vero cum? Voluptates doloribus eligendi modi ad nulla
+            corrupti atque saepe! Dolores sapiente explicabo possimus perferendis.
+            <div class="em-child">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                repellendus blanditiis cupiditate adipisci, commodi eveniet alias repellat
+                delectus, totam excepturi, nemo deleniti! Provident est debitis consequatur
+                vero sit, quis tempora!
+            </div>
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia saepe, voluptas
+            asperiores laudantium eos maxime iusto ipsa ducimus vero odio quos numquam atque
+            delectus enim recusandae omnis assumenda amet repellendus!
+        </div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="units.html#inicio-unidades-medida" class="volver-inicio">🔼 Ir a inicio unidades de medida</a>
+        <hr>
+    </article>
+
+    <article id="rems">
+        <h2>Unidades REMs</h2>
+
+
+        <h3>Ejemplos:</h3>
+
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="units.html#inicio-unidades-medida" class="volver-inicio">🔼 Ir a inicio unidades de medida</a>
+        <hr>
+    </article>
+
+</body>
+
+</html>
