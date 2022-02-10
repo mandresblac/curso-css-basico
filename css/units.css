@@ -66,10 +66,25 @@ a {
     font-size: 2em;/* Toma como referencia el tamaño de fuente del elemento padre .ems que es 24px */
 }
 
-/* -----------------------------------Unidades REMs-------------------------------------- */
+/* ------------------------------Unidades REMs (Root em)--------------------------------- */
 
+.rems {
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1rem .5rem;
+    border: thick solid rebeccapurple;
+}
 
+.rem-child {
+    background-color: salmon;
+    border: thick solid beige;
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    /* Toma como referencia el tamaño de fuente del elemento padre .ems que es 24px */
+}
 
+/* ------------------------------Unidades EXs----------------------------------- */
 
 
 
