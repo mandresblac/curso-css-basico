@@ -25,7 +25,19 @@
         <ol type="a">
             <li><a href="colors.html#colores-css">Colores en CSS</a></li>
             <li><a href="colors.html#colores-por-nombre">Colores por nombre</a></li>
-            <li><a href="colors.html#sistema-hexadecimal">Sistema Hexadecimal</a></li>
+            <li>
+                <a href="colors.html#sistema-hexadecimal">Sistema de colores Hexadecimall</a>
+            </li>
+            <li>
+                <a href="colors.html#sistema-rgb">Sistema de colores RGB (Red, Green, Blue)</a>
+            </li>
+            <li>
+                <a href="colors.html#sistema-hsl">Sistema de colores HSL (Tono, saturacion, Luminocidad)</a>
+            </li>
+            <li>
+                <a href="colors.html#transparent-currentcolor">Transparent & currentColor</a>
+            </li>
+            <li><a href="colors.html#propiedad-opacity">Propiedad opacity</a></li>
         </ol>
 
 
@@ -83,11 +95,210 @@
     </article>
 
     <article id="sistema-hexadecimal">
-        <h2>Sistema Hexadecimal</h2>
+        <h2>Sistema de colores Hexadecimal</h2>
+        <p>
+            Se llama hexadecimal porque esta basado en el sistema de numeración hexadecimal,
+            es decir que tiene 16 digitos así: 0123456789ABCDEF.
 
+        </p>
 
+        <p>
+            En este sistema hexadecimal hay dos subsistemas de colores:
+        <ul>
+            <li>
+                <b>RGB (Red, Green, Blue)</b>: Que se utiliza para medios digitales como las
+                pantallas.
+            </li>
+            <li>
+                <b>CMYK (Cyan, Magenta, Yellow, Key)</b>:Que es para los medios impresos.
+            </li>
+        </ul>
+        </p>
+
+        <p>
+            Los colores en hexadecimal son de seis digitos, y empiezan con el símbolo de
+            númeral, por ejemplo:
+            #ff6600
+        <ul>
+            <li>
+                Los primeros dos digitos representan el color rojo (red): <b>ff</b> del RGB.
+            </li>
+            <li>
+                Los siguientes dos representan el canal del color verde (green): <b>66</b> del RGB
+            </li>
+            <li>
+                los dos números finales van a representar el canal azul (blue): <b>00</b> del RGB.
+            </li>
+        </ul>
+
+        <b><u>NOTA</u></b>: Tambien se puede simplicar de seis numeros (#ff6600) a solo tres
+        números (#f60) y da lo mismo.
+        </p>
+        <p>
+            Desde hace algunos años ya se puede aplicar opacidad en el sistema de colores
+            RGB, la opacidad va de 0% (que es totalmente transparente) hasta 100% (que es
+            totalmente saturado el color) y esto se logra poniendo otros dos digitos al final del número del color
+            hexadecimal (quedando con untotal de ocho digitos), así: <b>#00000050</b>, esto
+            seria un negro con opacidad del 50%.
+        </p>
+        <p>
+            <b><u>NOTA</u></b>: Tambien se puede simplicar de ocho números (#00000050) a
+            solo cuatro números (#0005) y da lo mismo, 50% de opacidad.
+        </p>
 
         <h3>Ejemplos:</h3>
+
+        <div class="color-hex">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
+                molestias nesciunt minus velit eum quasi itaque provident modi cupiditate
+                tempore. Assumenda fuga quibusdam eveniet voluptatibus placeat iste
+                explicabo, distinctio corporis!
+            </p>
+        </div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="colors.html#inicio-colores-css" class="volver-inicio">🔼 Ir a inicio colores en css</a>
+        <hr>
+    </article>
+
+    <article id="sistema-rgb">
+        <h2>Sistema de colores RGB (Red, Green, Blue)</h2>
+        <p>
+            Tiene tres canales (Red, green, Blue) o (255, 255, 255) y el maximo número que
+            acepta cada canal va de 0 a 255.
+        </p>
+        <p>
+            Para utilizar el sistema de colores RGB en css tenemos que utilizar una función
+            llamada rgb(255, 255, 255).
+        </p>
+        <p>
+            El sistema de colores RGB acepta 8 bits por canal, y un bit puede tener dos
+            posibles valores 0 o 1 porque el lenguaje de las computadoras es el sistema
+            binario dode solo hay ceros y unos.
+        </p>
+
+        <p>
+            Por cada canal de color tenemos valores que van del 0 al 255.
+        </p>
+        <p>
+            Para aplicar la opacidad utilizamos la funcion rgba() que egrega la "a" que es
+            el canal alfa que va de 0 a 100, ejemplo: rgba(0, 0, 0, .33), el .33 seria opacidad al 33%.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="color-rgb">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
+                molestias nesciunt minus velit eum quasi itaque provident modi cupiditate
+                tempore. Assumenda fuga quibusdam eveniet voluptatibus placeat iste
+                explicabo, distinctio corporis!
+            </p>
+        </div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="colors.html#inicio-colores-css" class="volver-inicio">🔼 Ir a inicio colores en css</a>
+        <hr>
+    </article>
+
+    <article id="sistema-hsl">
+        <h2>Sistema de colores HSL (Tono, saturacion, Luminocidad)</h2>
+        <p>
+            El sistema de color HSL son la siglas de Hue (Tono) sauration (saturación que es
+            la intensidad del color) y lightness (luminosidad del color).
+        </p>
+        <p>
+            El primer valor es Hue el tono (Circulo cromático) y representa un angulo de 0° a 360° grados, donde:
+        <ul>
+            <li>0° grados seria el color red.</li>
+            <li>60° grados seria el color yellow.</li>
+            <li>102° grados seria el color green.</li>
+            <li>180° grados seria el colo cyan.</li>
+            <li>240° grados seria el color blue.</li>
+            <li>300° grados seria el color magenta.</li>
+        </ul>
+        </p>
+
+        <figure>
+            <img src="assets/HSL-wheel.jpg" alt="circulo cromático">
+            <figcaption><b>Circulo cromático</b></figcaption>
+        </figure>
+
+        <p>
+            Para utilizar el sistema de colores HSL en css tenemos que utilizar una función
+            llamada hsl(Tono, saturacion, Luminocidad), ejemplo: <br>
+            <b>background-color: hsl(120, 100%, 50%);</b>
+        </p>
+
+        <p>
+            Para aplicar la opacidad utilizamos la funcion hsla() que egrega la "a" que es
+            el canal alfa que va de 0 a 100, ejemplo: hsla(210, 75%, 65%, .33), el .33 seria opacidad al 33%.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="color-hsl">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
+                molestias nesciunt minus velit eum quasi itaque provident modi cupiditate
+                tempore. Assumenda fuga quibusdam eveniet voluptatibus placeat iste
+                explicabo, distinctio corporis!
+            </p>
+        </div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="colors.html#inicio-colores-css" class="volver-inicio">🔼 Ir a inicio colores en css</a>
+        <hr>
+    </article>
+
+    <article id="transparent-currentcolor">
+        <h2>Transparent & currentColor</h2>
+        <p>
+            Para quitarle el color a un elemento utilizamos el valor de atributo transparent
+            que se puede aplicar a cualquiera de los sistemas de colores vistos
+            anteriormente.
+        </p>
+
+        <p>
+            El valor currentColor hereda el valor por defeco (es decir el que le da el
+            navegador) o asignado por el usuario en la propiedad color (que es la que le da
+            color al texto) del ancestro que tenga definida esta propiedad, busca del
+            ancestro mas cercano al mas alejado.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <section>
+            <div class="color-transparent-current">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
+                    molestias nesciunt minus velit eum quasi itaque provident modi cupiditate
+                    tempore. Assumenda fuga quibusdam eveniet voluptatibus placeat iste
+                    explicabo, distinctio corporis!
+                </p>
+            </div>
+        </section>
+
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="colors.html#inicio-colores-css" class="volver-inicio">🔼 Ir a inicio colores en css</a>
+        <hr>
+    </article>
+
+    <article id="propiedad-opacity">
+        <h2>Propiedad opacity</h2>
+        <p>
+            La propiedad opacity aplica el nível de opacidad y va de 0 a 100 o de 0 a 1 y
+            aplica para todas las propiedades css que tenga el selector al que le estamos
+            aplicando esa opacidad.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="opacity">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
+                molestias nesciunt minus velit eum quasi itaque provident modi cupiditate
+                tempore. Assumenda fuga quibusdam eveniet voluptatibus placeat iste
+                explicabo, distinctio corporis!
+            </p>
+        </div>
 
         <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
