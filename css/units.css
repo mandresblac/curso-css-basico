@@ -86,12 +86,28 @@ a {
 
 /* ------------------------------Unidades EXs----------------------------------- */
 
+.exs {
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1ex .5ex;
+    border: thick solid rebeccapurple;
+}
+
+.exs-child {
+    background-color: salmon;
+    border: thick solid beige;
+    margin: 0.5ex;
+    padding: 1ex;
+    font-size: 2ex;
+}
 
 
+/* ------------------------------Unidades CHs----------------------------------- */
 
-
-
-
+.chs {
+    background-color: cadetblue;
+    width: 10ch;
+}
 
 
 
