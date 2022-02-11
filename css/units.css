@@ -3,7 +3,7 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 
 html {
-    box-sizing: border-box; /* Esto es para que el tamaño de la caja empiese a contar desde border y no desde content box */
+    box-sizing: border-box; /* Esto es para que el tamaño de la caja empiese a contar desde border y no desde content box */        
 }
 
 *,
@@ -108,6 +108,45 @@ a {
     background-color: cadetblue;
     width: 10ch;
 }
+
+
+/* ------------------------------Porcentajes (%)----------------------------------- */
+
+
+.percentages {
+    background-color: darkkhaki;
+   /*  padding: 5%;
+    margin: 20% 10% ; */
+    width: 80%;
+    font-size: 100%;
+    height: 100%;
+}
+
+.height-parent {
+    background-color: brown;
+    color: white;
+    width: 500px;
+    height: 500px;
+}
+
+.height-child {
+    background-color: coral;
+    color: white;
+    width: 50%;
+    height: 50%;
+}
+
+
+/* ------------------------------Unidades del Viewport----------------------------------- */
+
+
+
+
+
+
+
+
+
 
 
 
