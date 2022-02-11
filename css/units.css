@@ -139,11 +139,28 @@ a {
 
 /* ------------------------------Unidades del Viewport----------------------------------- */
 
+.viewport {
+    background-color: darkcyan;
+    width: 50vw;
+    width: 100vw; /* Cuando demos un width de 100vw hay que recordar que la etiqueta Body 
+    tiene margenes por defecto (es decir asignadas por el propio navegador) y las barras de 
+    scroll del navegador tambien forman parte del viewport  */
+    width: 100%;
+    height: 50vw;
+    height: 100vw;
+    font-size: 2vw;
+    padding: 2vh 2vw;
+}
 
+/* -----------------------------------vmax - vmin---------------------------------------- */
 
-
-
-
+.vmin,
+.vmax {
+    background-color: darksalmon;
+    border: thick solid cyan;
+    width: 50vmax;
+    height: 50vmin;
+}
 
 
 

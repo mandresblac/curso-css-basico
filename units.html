@@ -31,6 +31,9 @@
             <li><a href="units.html#chs">Unidades CHs</a></li>
             <li><a href="units.html#porcentajes">Porcentajes (%)</a></li>
             <li><a href="units.html#unidades-viewport">Unidades del Viewport</a></li>
+            <li>
+                <a href="units.html#usos-unidades-medida">¿Cuándo usar cada unidad de medida?</a>
+            </li>
         </ol>
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
@@ -306,10 +309,77 @@
 
     <article id="unidades-viewport">
         <h2>Unidades del Viewport</h2>
-
+        <p>
+            Las unidades de viewport siempre van a estar basadas en el tamaño de la pantalla.
+        </p>
+        <p>
+            El viewport es el area visible de la pantalla dode se renderiza el contenido
+            HTML y tiene cuatro unidades de medida:
+        <ul>
+            <li>
+                <b>vw (viewport width)</b>: Hace referencia al ancho del viewport y se le
+                pueden asignar valores de 1 a 100 en unidades vw(viewport width).
+            </li>
+            <li>
+                <b>vh (viewport height)</b>: Hace referencia al alto del viewport y se le
+                puede asignar valores de 1 a 100 en unidades vh(viewports height).
+            </li>
+            <li>
+                <b>vmax</b>: Entre vw y vh toma el que tenga mayor valor.
+            </li>
+            <li>
+                <b>vmin</b>: entre vw y vh toma el que tenga menor valor.
+            </li>
+        </ul>
+        </p>
 
         <h3>Ejemplos:</h3>
+        <div class="viewport">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam voluptatem
+            fuga, accusantium nostrum magni at reiciendis consequatur autem facere molestias
+            quas iure incidunt quis unde quia ratione dolores eius a!
+        </div>
+        <secttion>
+            <div class="viewport">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                reiciendis, quisquam iusto libero maxime illo placeat molestiae blanditiis
+                tempore. Eligendi in culpa, tempore a ipsam voluptate commodi asperiores
+                fuga inventore!
+            </div>
+        </secttion>
+        <br>
+        <div class="vmax">Caja vmax</div>
+        <div class="vmin">Caja vmin</div>
 
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="units.html#inicio-unidades-medida" class="volver-inicio">🔼 Ir a inicio unidades de medida</a>
+        <hr>
+    </article>
+
+    <article id="usos-unidades-medida">
+        <h2>¿Cuándo usar cada unidad de medida?</h2>
+        <p>
+            Las <b>unidades de medidas absolutas</b> las podemos utilizar para diseñar los
+            estilos de una pagina que se va a imprimir (dependiendo del formato de la hoja),
+            como son: cm, mm, in.
+        </p>
+        <p>
+            Unidades en pixeles para definir la propiedad font-size de todo el documento
+            HTML.
+        </p>
+        <p>
+            Las <b>unidades relativas</b> (em o rem) las podemos utilizar para la
+            tipografia, paddings, margins, dictancias internas y externas.
+        </p>
+        <p>
+            <b><u>NOTA</u></b>: los porcentajes son muy utilizados en el diseño responsivo o
+            Responsive Web Desing.
+        </p>
+        <p>
+            Las <b>unidades del viewport</b> podemos utilizarlas para generar efectos de
+            pantalla completa, tambien para textos fluidos.
+        </p>
 
         <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables y funciones en CSS</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/variables-functions.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio-variables-functions">Variables y funciones en CSS</h1>
+
+    <article id="temario-variables-functions">
+        <h2>Temario variables y funciones en CSS </h2>
+        <ol type="a">
+            <li>
+                <a href="variables-functions.html#custom-properties">Custom Properties (Variables CSS)</a>
+            </li>
+            <li><a href="variables-functions.html#function-url">Función url()</a></li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <hr>
+    </article>
+
+    <article id="custom-properties">
+        <h2>Custom Properties (Variables CSS)</h2>
+        <p>
+            Una Custom properties (o Propiedade configurable) es una variable, es decir un
+            espacio reservado de memoria en la computadora que va a almacenar el valor de un
+            dato.
+        </p>
+        <p>
+            Las variables en CSS (al igual que en muchos lenguajes de programcaión) van a
+            tener un alcance o scope, que es el ambito en el que existen y ese ambito va a
+            ser el selector en el que definamos la declaracion de la variable y todos sus
+            elementos subsecuentes, es decir toda la cadena de hijos en la estructura HTML
+            que tengamos a partir del selector donde se definio la variable.
+        </p>
+        <p>
+            Las variables se deben definir dentro de un selector, por ejemplo: <br>
+            <code>.custom-props-1 { <br> --primary-color: gray; <br> --font-size: 32px; <br>
+            }</code>
+        </p>
+
+        <p>
+            <b><u>NOTA</u></b>: Podemos definir variables con el mismo nombre dentro de
+            diferentes selectores y no se va apresentar ningun problema, ya que cada una de
+            esas variables tiene un alcance o scope que es el selector dentro del cual se
+            definieron, por lo tanto no se genera conflicto entre ellas.
+        </p>
+        <p>
+            En css todas las variables se declaran al inicio con dos guiones --. <br>
+            Cuando ccs detecta que se empieza con dos guiones -- es que se esta declarando
+            una variable.
+        </p>
+        <p>
+            Para usar una variable ccs usamos la función var() y dentro de los parentesis
+            llamamos la variable que queremos usar. <br>
+            La funcion var() recibe un segundo parametro que puede dar un valor por
+            defecto, es decir que si no encuentra el primer valor aplica el segundo.
+        </p>
+        <p>
+            Si queremos que una variable exista dentro de un selector en particular la
+            definimos dentro de ese selector, si queremos que exista para todos los elementos
+            dentro del documento HTML, declaramos las variables en la etiqueta HTML pero
+            utilizamos una pseudoclase llamada :root que hace referencia a la etiqueta HTML,
+            ejemplo: <br>
+            <code>:root { <br>
+            --default-bg-color: skyblue; <br>
+            }</code>
+        </p>
+
+        <h3 class="title-props">Ejemplos:</h3>
+
+        <article class="custom-props-1">
+            <section class="custom-props-2">
+                <div class="custom-props-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae tempora
+                    consequuntur consequatur molestias enim nemo repudiandae dolorem
+                    sapiente veniam numquam! Atque pariatur explicabo similique repudiandae
+                    ipsam reiciendis inventore nisi rerum.
+                </div>
+            </section>
+        </article>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="variables-functions.html#inicio-variables-functions" class="volver-inicio">🔼 Ir a inicio variables y
+            funciones</a>
+        <hr>
+    </article>
+
+    <article id="function-url">
+        <h2>Función url()</h2>
+
+
+        <h3>Ejemplos:</h3>
+
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="variables-functions.html#inicio-variables-functions" class="volver-inicio">🔼 Ir a inicio variables y
+            funciones</a>
+        <hr>
+    </article>
+
+</body>
+
+</html>

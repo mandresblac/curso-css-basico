@@ -1,0 +1,87 @@
+/* Esto siempre debe ir al inicio de la hoja de estilos de css asi se resetea el tamaño de todas las cajas de todos  los elementos HTML que tenga en el documento para que no empiesen desde el content box sino desde el border */
+/* Articulo de Paul Irish sobre la poropiedad box-sizing */
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+    /* Esto es para que el tamaño de la caja empiese a contar desde border y no desde content box */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: brown;
+    background-color: rgb(129, 200, 218);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* -------------------------Custom Properties (Variables CSS)---------------------------- */
+
+/* Para definir variables a todos los elementos dentro del documento HTML, declaramos las variables en la etiqueta HTML pero utilizamos una pseudoclase llamada :root que hace referencia a la etiqueta HTML */
+:root {
+    --default-bg-color: skyblue;
+}
+
+
+/* Las variables tiene que definirse dentro de un selector,  en este caso el selector es .custom-props-1 */
+/*  En css todas las variables se declaran al inicio con dos guiones -- */
+.custom-props-1 {
+    /* Definimos dos variables */
+    --primary-color: gray; 
+    --font-size: 32px;
+    /* Uso de las variables */
+    background-color: var(--primary-color); /* Para usar una variable ccs usamos la función 
+    var() y dentro de los parentesis llamamos la variable que queremos usar */
+}
+
+.custom-props-2{
+    background-color: var(--default-bg-color);
+}
+
+/* Las variables se pueden heredar a los elementos hijos */
+.custom-props-3 {
+    font-size: var(--font-size);
+}
+
+.title-props {
+    --primary-color: purple;
+    color: var(--primary-color, orange); /* La funcion var() recibe un segundo parametro 
+    que puede dar un valor por defecto, es decir que si no encuentra el primer valor aplica el segundo. */
+    background-color: var(--default-bg-color);
+}
+
+
+/* -----------------------------------Función url()-------------------------------------- */
+
+
+
+
+
+
+
+
+
+
