@@ -77,6 +77,36 @@ a {
 /* -----------------------------------Función url()-------------------------------------- */
 
 
+/* -----------------------------------Función calc()-------------------------------------- */
+
+.ch-10 {
+    --padding-size: 3ch;
+    --num-ch: 10ch;
+    background-color: var(--default-bg-color);
+    font-size: 2rem;
+    padding: var(--padding-size);
+    width: calc(var(--num-ch) + var(--padding-size)* 2); /* OJO: siempre hay que dejar espacios entre el operador y los operandos sino la funcion calc() no funcionara, se volvera loca */
+}
+
+
+/* ---------------------------------Funciones min() & max()------------------------------ */
+
+.min-max {
+    background-color: burlywood;
+    margin-top: 1rem;
+    width: min(300px, 20vw, 20rem); /* Aplica el menor valor */
+    height: max(200px, 25vh);/* Aplica el mayor valor */
+}
+
+
+/* -------------------------------------Función clamp()----------------------------------- */
+
+h1 {
+    font-size: clamp(2rem, 1rem +3vw, 3rem);
+}
+
+
+
 
 
 
