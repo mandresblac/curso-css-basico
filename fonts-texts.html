@@ -24,17 +24,149 @@
         <h2>Temario Estilos de fuentes y textos</h2>
         <ol type="a">
             <li><a href="fonts-texts.html#estilos-fuentes">Estilos de Fuentes</a></li>
+            <li>
+                <a href="fonts-texts.html#fuentes-externas">Como cargar fuentes (o
+                    tipografias) externas (@font-face & font-display)</a>
+            </li>
+            <li><a href="fonts-texts.html#google-fonts ">Google Fonts</a></li>
         </ol>
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
         <hr>
     </article>
 
-    <article>
-        <h2 id="estilos-fuentes">Estilos de Fuentes</h2>
+    <article id="estilos-fuentes">
+        <h2>Estilos de Fuentes</h2>
+        <p>
+            Las siguientes propiedades tienen que ver con los estilos de la fuente:
+        <ul>
+            <li>
+                <b>font family</b>: Tiene varias familias de fuentes, las familias de fuente
+                son el conjunto de familias tipografias que podemos aplicar. <br>
+                Cada sistema operativo (Windows, Mac, Linux) viene con sus propias fuentes
+                seguras por defecto instaladas dentro del sistema operativo.
+            </li>
+            <li>
+                <b>font-size</b>: Va a definir el tamaño de la fuente.
+            </li>
+            <li>
+                <b>font-weight</b>: Va a definir el grosor de la tipografia, pero depende de
+                la familia tipografica, si tiene o no definidos los grosores de la fuente.
+            </li>
+            <li>
+                <b>font-style</b>: Va a definir el tipo de estilo de la fuente.
+            </li>
+            <li>
+                <b>font-variant</b>: Define qué glifo usar para cada letra, ejemplo:
+                <ul>
+                    <li>
+                        <code>font-variant: normal;</code><br>
+                        Cada letra usa su glifo normal, Ejemplo: Hola Mundo
+                    </li>
+                    <li>
+                        <code>font-variant: small-caps;</code><br>
+                        Convierte a mayusculas toda la tipografia, ejemplo: HOLA MUNDO
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>line-heignt</b>: Es la altura de línea, el interlineado, es decir la
+                altura (o separacion entre renglones) que va a tener cada línea dentro del
+                parrafo.
+            </li>
+            <li>
+                <b>font</b>: Es la propiedad shorthand para <code>font-style</code>,
+                <code>font-variant</code>, <code>font-weight</code>, <code>font-size</code>,
+                <code>line-height</code> and <code>font-family</code>.
+            </li>
+        </ul>
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <p class="font">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non amet
+            reprehenderit repellendus pariatur tempora odit aut culpa eius dicta, ad ex!
+            Velit fugit, accusantium nisi voluptas at quo odit!
+        </p>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="fonts-texts.html#inicio-fuentes-textos" class="volver-inicio">🔼 Ir a inicio Estilos
+            fuentes y textos</a>
+        <hr>
+    </article>
+
+    <article id="fuentes-externas">
+        <h2>Como cargar fuentes (o tipografias) externas (@font-face & font-display)</h2>
+        <p>
+            Para agregar la tipografia que uno quiera o que no se encuentre dentro de las
+            tipografias que por defecto cargan los sisitemas operativos podemos usar una
+            regla de css llamada <code>@font-face</code> y mandar a llamar una tipografia
+            externa, para ello necesitamos tener los archivo fisicos de la tipografia
+            descargados en nuestro equipo y dentro de la carpeta del proyecto que estamos
+            trabajando.
+        </p>
+        <p>
+            Para el navegador el tipo de archivo de la fuente tipografica debe tener el
+            formato woff o woff2 (Web open font format), que es un formato abierto de
+            tipografia para le web
+        </p>
+
+        <h3>Propiedad <code>font-display</code></h3>
+        <p>
+            La propiedad <code>font-display</code> de css nos va a decir como es que
+            queremos cargar una fuente personalizada y tiene los siguiente valores:
+        <ul>
+            <li>
+                <code><b>auto</b></code>: Permite que el navegador utilice el metodo
+                predeterminado que suele ser block.
+            </li>
+            <li>
+                <code><b>block</b></code>: Oculta brevemente el texto hasta que la fuente
+                haya sido descargadapor completo.
+            </li>
+            <li>
+                <code><b>swap</b></code>: Indica al navegador que utilice la fuente
+                alternativa para mostrar el texto hasta que la fuente personalizada se haya
+                cargado por completo.
+            </li>
+            <li>
+                <code><b>flaback</b></code>: Es una mezcla de auto y sawp.
+            </li>
+            <li>
+                <code><b>optional</b></code>: Ocultará el texto,luego lo cargará con la
+                fuente alternativa y finalmente aplicarála fuente personalizada.
+            </li>
+        </ul>
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <p class="chalet">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, molestiae
+            sint. Nobis, quam exercitationem! Dolor repellendus iusto explicabo soluta
+            corrupti quas commodi dolorem beatae ratione reprehenderit incidunt
+            doloremque, quisquam consequuntur.
+        </p>
+        <p class="pecita">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
+            molestias? Perspiciatis reiciendis deleniti, sit ducimus vitae debitis.
+            Dolor animi quisquam deleniti, facilis culpa ipsum voluptas beatae
+            necessitatibus odio nisi eos.
+        </p>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="fonts-texts.html#inicio-fuentes-textos" class="volver-inicio">🔼 Ir a inicio Estilos
+            fuentes y textos</a>
+        <hr>
+    </article>
+
+    <article id="google-fonts">
+        <h2>Google Fonts</h2>
 
 
         <h3>Ejemplos:</h3>
+
 
         <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>

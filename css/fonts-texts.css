@@ -38,4 +38,64 @@ a {
 }
 
 
-/* -------------------------  ---------------------------- */
+/* -------------------------Estilos de Fuentes---------------------------- */
+
+.font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: oblique;
+    font-variant: small-caps;
+    line-height: 2;
+    font: italic small-caps bold 24px / 1.5 monospace; /* font es el shorthand o propiedad 
+    abreviada para font-style font-variant font-weight font-size line-height y font-family. 
+    OJO: entre font-size y line-height hay que poner una linea deiagonal "/" sino, no
+    funciona.
+    */
+}
+
+
+/* --------Como cargar fuentes (o tipografias) externas (@font-face & font-display)----- */
+
+
+/* Tipografia 1 con nombre Chalet */
+@font-face {
+    font-family: "Chalet"; /* Definimos el nombre que queremos darle a la familia tipografica */
+    src: url("../assets/Chalet.woff")format("woff");
+    font-display: swap;
+    /* Si tenemos mas de un archivo tipografico lo podemos expresar así:
+    src: url("../assets/Chalet.woff")format("woff"), 
+         url(../assets/Chalet.woff2),format("woff2"); */
+}
+
+/* Aplicamos la tipografia Chalet de arriba a la clase .chalet */
+.chalet {
+    font-family: "Chalet", sans-serif; /* Sino encuentra la fuente Chalet, entonces que aplique la fuente sans-serif */
+    font-size: 2rem;
+}
+
+
+/* Tipografia 2 con nombre Pecita */
+@font-face {
+    font-family: "Pecita";
+    src: url("../assets/Pecita.woff")format("woff");
+    font-display: swap;
+}
+
+/* Aplicamos la tipografia Pecita de arriba a la clase .pecita */
+.pecita {
+    font-family: "Pecita", cursive; /* Sino encuentra la fuente Pecita, entonces que aplique la fuente cursive */
+    font-size: 2rem;
+}
+
+
+/* ------------------------------------Google Fonts--------------------------------------- */
+
+
+
+
+
+
+
+
