@@ -92,6 +92,88 @@ a {
 
 /* ------------------------------------Google Fonts--------------------------------------- */
 
+.raleway {
+    font-family: 'Raleway', sans-serif; /* Funte tipografica Raleway */
+    font-size: 2rem;
+}
+
+
+/* ----------------------------------Estilos de Texto------------------------------------ */
+
+/* ---------------text-aling------------- */
+.text {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/* ---------------text-decoration------------- */
+
+.text-decoration {
+    font-size: 1.5rem;
+    text-align: justify;
+    text-decoration: underline;
+}
+
+/* ---------------text-indent------------- */
+.text-indent {
+    font-size: 1.5rem;
+    text-align: left;
+    text-indent: 5rem;
+}
+
+/* ---------------text-overflow------------- */
+.text-overflow {
+    background-color: blanchedalmond;
+    border: thin solid black;
+    padding: 1rem;
+    width: 50%;
+    text-align: left;
+    font-size: 1.5rem;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* ---------------text-transform------------- */
+.text-transform {
+    font-size: 1.5rem;
+    text-align: left;
+    text-transform: capitalize;
+    text-transform: lowercase;
+    text-transform: uppercase;
+    text-transform: none;
+}
+
+/* ---------------letter-spacing------------- */
+.letter-spacing {
+    font-size: 1.5rem;
+    text-align: left;
+    letter-spacing: .5rem;
+}
+
+/* ---------------white-space------------- */
+.white-space {
+    font-size: 1.5rem;
+    text-align: left;
+    white-space: pre;
+}
+
+/* ---------------word-spacing------------- */
+.word-spacing {
+    font-size: 1.5rem;
+    text-align: left;
+    word-spacing: 1rem;
+}
+
+/* ---------------writing-mode------------- */
+.writing-mode {
+    font-size: 1.5rem;
+    text-align: left;
+    writing-mode: horizontal-tb;
+    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
+}
 
 
 

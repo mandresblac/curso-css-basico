@@ -6,7 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilos de fuentes y textos</title>
+
+    <!-- fuentes tipograficas de Google fonts Raleway-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+
+    <!-- Archivo de estilos -->
     <link rel="stylesheet" href="css/fonts-texts.css">
 
     <style>
@@ -29,6 +37,10 @@
                     tipografias) externas (@font-face & font-display)</a>
             </li>
             <li><a href="fonts-texts.html#google-fonts ">Google Fonts</a></li>
+            <li><a href="fonts-texts.html#estilos-texto">Estilos de Texto</a></li>
+            <li>
+                <a href="fonts-texts.html#iconos-tipograficos ">Iconos Tipográficos</a>
+            </li>
         </ol>
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
@@ -163,15 +175,196 @@
 
     <article id="google-fonts">
         <h2>Google Fonts</h2>
-
+        <p>
+            <b>Google fonts</b> es un directorio interactivo de uso libre para fuentes
+            tipograficas de la web (de la empresa Google) que son open source, por lo que no
+            hay que pagar licencia para utilizarlas.
+        </p>
+        <p>
+            Enlace a <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+        </p>
 
         <h3>Ejemplos:</h3>
-
+        <p class="raleway">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam harum sequi
+            explicabo? Aperiam, quisquam? Voluptatem, architecto amet. Excepturi quod
+            quaerat obcaecati commodi consequuntur eveniet, ad exercitationem debitis
+            asperiores autem? Pariatur?
+        </p>
 
         <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
         <a href="fonts-texts.html#inicio-fuentes-textos" class="volver-inicio">🔼 Ir a inicio Estilos
             fuentes y textos</a>
+        <hr>
+    </article>
+
+    <article id="estilos-texto">
+        <h2>Estilos de Texto</h2>
+        <p>Propiedades css para dar estilos el texto:</p>
+        <ul>
+            <li>
+                <code><b>text-aling</b></code>: Permite alinear el texto horizontalmente, y
+                su valor por defecto es <b>left (alineado a la izquierda)</b> pero tambien
+                tiene otros valores como <b>right (derecha)</b>, <b>center (centro)</b>,
+                <b>justify (justificado)</b>, ejemplo:
+
+                <p class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+                    ipsam modi esse enim aliquam assumenda cum, adipisci minus soluta
+                    perferendis repellendus, hic molestias qui debitis. Optio animi vero
+                    ullam soluta.
+                </p>
+            </li>
+            <li>
+                <code><b>text-decoration</b></code>: Define cómo se decora el contenido de
+                texto del elemento y tiene los valores <b>none</b> (Elimina cualquier
+                decoración de texto) y <b>underline</b> (Subrayado), ejemplo:
+
+                <p class="text-decoration">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+                    ipsam modi esse enim aliquam assumenda cum, adipisci minus soluta
+                    perferendis repellendus, hic molestias qui debitis. Optio animi vero
+                    ullam soluta.
+                </p>
+            </li>
+            <li>
+                <code><b>text indent</b></code>: Define la sangría (o indentación) de la
+                primera línea de texto del elemento y su valor tiene que ser múmerico,
+                ejemplo:
+
+                <p class="text-indent">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+                    ipsam modi esse enim aliquam assumenda cum, adipisci minus soluta
+                    perferendis repellendus, hic molestias qui debitis. Optio animi vero
+                    ullam soluta.
+                </p>
+            </li>
+            <li>
+                <code><b>text-overflow</b></code>: Define cómo se comporta el contenido de
+                texto oculto si se desborda y tiene dos valores:
+                <ul>
+                    <li>
+                        <code><b>clip</b></code>: El contenido del texto está recortado y no
+                        es accesible.
+                    </li>
+                    <li>
+                        <code><b>ellipsis</b></code>: El contenido desbordante se reemplaza
+                        por puntos suspensivos :…
+                    </li>
+
+                </ul>
+
+                <p>
+                    <b><u>NOTA</u></b>: Para que la propiedad overflow funcione hay que
+                    ponerle la propiedad <code><b>overflow</b></code> con el valor de
+                    <code><b>hidden</b></code> y adicionalemnte la propiedad
+                    <code><b>white-space</b></code> con el valor de <code><b>nowrap</b></code>.
+                </p>
+
+                <h3>Ejemplo:</h3>
+                <p class="text-overflow">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+                    ipsam modi esse enim aliquam assumenda cum, adipisci minus soluta
+                    perferendis repellendus, hic molestias qui debitis. Optio animi vero
+                    ullam soluta.
+                </p>
+            </li>
+            <li>
+                <code><b>text-transform</b></code>: Define cómo se debe transformar el contenido del texto, su valor por
+                defecto es <code>none</code> y tiene otros valores como:.
+                <ul>
+                    <li>
+                        <code><b>capitalize</b></code>: Convierte la primera letra de cada
+                        palabra en mayúscula.
+                    </li>
+                    <li>
+                        <code><b>uppercase</b></code>: Convierte todas las letras en
+                        mayúsculas .
+                    </li>
+                    <li>
+                        <code><b>lowercase</b></code>: Convierte todas las letras en
+                        minúsculas .
+                    </li>
+                </ul>
+
+                <h3>Ejemplo:</h3>
+                <p class="text-transform">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+                    ipsam modi esse enim aliquam assumenda cum, adipisci minus soluta
+                    perferendis repellendus, hic molestias qui debitis. Optio animi vero
+                    ullam soluta.
+                </p>
+            </li>
+            <li>
+                <code><b>letter-spacing</b></code>: Define el espaciado entre los caracteres de un bloque de texto, es
+                el espaciado que va a haber entre cada letra.
+
+                <h3>Ejemplo:</h3>
+                <p class="letter-spacing">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+                    ipsam modi esse enim aliquam assumenda cum, adipisci minus soluta
+                    perferendis repellendus, hic molestias qui debitis. Optio animi vero
+                    ullam soluta.
+                </p>
+            </li>
+            <li>
+                <code><b>white-space</b></code>: Define cómo se maneja el espacio en blanco del elemento.
+
+
+                <h3>Ejemplo:</h3>
+                <p class="white-space">
+                    import react from "react";
+                    import Title from"./Title";
+
+                    function App{
+                    return Title;
+                    }
+                </p>
+            </li>
+            <li>
+                <code><b>word-break</b></code>: Define cómo deben dividirse las palabras al
+                llegar al final de una línea.
+            </li>
+            <li>
+                <code><b>word-spacing</b></code>: Define el espaciado entre palabras de un
+                bloque de texto.
+
+                <h3>Ejemplo:</h3>
+                <p class="word-spacing">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quae
+                    doloribus aut hic, fugiat quas consequuntur quam ab sunt? Vel optio
+                    adipisci explicabo doloribus nemo aut unde reiciendis ea libero.
+                </p>
+            </li>
+            <li>
+                <code><b>writing-mode</b></code>: Define el modo en que se mostrara el
+                texto, vertical de derecha a izquierda o vertical de izquierda a derecha.
+
+                <h3>Ejemplo:</h3>
+                <p class="writing-mode">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quae
+                    doloribus aut hic, fugiat quas consequuntur quam ab sunt? Vel optio
+                    adipisci explicabo doloribus nemo aut unde reiciendis ea libero.
+                </p>
+            </li>
+        </ul>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="fonts-texts.html#inicio-fuentes-textos" class="volver-inicio">🔼 Ir a
+            inicio Estilos fuentes y textos</a>
+        <hr>
+    </article>
+
+    <article id="iconos-tipograficos">
+        <h2>Iconos Tipográficos</h2>
+
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="fonts-texts.html#inicio-fuentes-textos" class="volver-inicio">🔼 Ir a
+            inicio Estilos fuentes y textos</a>
         <hr>
     </article>
 
