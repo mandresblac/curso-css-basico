@@ -25,22 +25,34 @@
         <h2>Temario estilos del fondo en CSS</h2>
         <ol type="a">
             <li>
-                <a href="backgrounds.html#background-color">Propiedad <code>background-color</code></a>
+                <a href="backgrounds.html#background-color">Propiedad background-color</a>
             </li>
             <li>
-                <a href="backgrounds.html#background-image">Propiedad <code>background-image</code></a>
+                <a href="backgrounds.html#background-image">Propiedad background-image</a>
             </li>
             <li>
-                <a href="backgrounds.html#background-repeat">Propiedad <code>background-repeat</code></a>
+                <a href="backgrounds.html#background-repeat">Propiedad background-repeat</a>
             </li>
             <li>
-                <a href="backgrounds.html#background-size">Propiedad <code>background-size</code></a>
+                <a href="backgrounds.html#background-size">Propiedad background-size</a>
             </li>
             <li>
-                <a href="backgrounds.html#background-position">Propiedad <code>background-position</code></a>
+                <a href="backgrounds.html#background-position">Propiedad background-position</a>
             </li>
             <li>
-                <a href="backgrounds.html#background-clip">Propiedad <code>background-clip</code></a>
+                <a href="backgrounds.html#background-clip">Propiedad background-clip</a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background-origin">Propiedad background-origin</a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background-attachment">Propiedad background-attachment</a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background">Propiedad background</a>
+            </li>
+            <li>
+                <a href="backgrounds.html#fondos-multiples">Fondos multiples</a>
             </li>
         </ol>
 
@@ -49,7 +61,7 @@
     </article>
 
     <article id="background-color">
-        <h2>Propiedad <code>background-color</code></h2>
+        <h2>Propiedad background-color</h2>
         <p>
             Esta propiedad define el color de fondo del elemento.
         </p>
@@ -65,7 +77,7 @@
     </article>
 
     <article id="background-image">
-        <h2>Propiedad <code>background-image</code></h2>
+        <h2>Propiedad background-image</h2>
         <p>
             Esta propiedad define la imagen de fondo del elemento. <br>
             Es decir que podemos poner una imagen de fondo.
@@ -85,7 +97,7 @@
     </article>
 
     <article id="background-repeat">
-        <h2>Propiedad <code>background-repeat</code></h2>
+        <h2>Propiedad background-repeat</h2>
         <p>
             Esta propiedad define como es que se va a repetir la imagen de fondo en el
             elemento.
@@ -119,7 +131,7 @@
     </article>
 
     <article id="background-size">
-        <h2>Propiedad <code>background-size</code></h2>
+        <h2>Propiedad background-size</h2>
         <p>
             Esta propiedad define el tamaño de la imagen de fondo. El primer valor es para
             el eje X (ancho, width), el segundo valor eje Y (alto, height).
@@ -150,7 +162,7 @@
     </article>
 
     <article id="background-position">
-        <h2>Propiedad <code>background-position</code></h2>
+        <h2>Propiedad background-position</h2>
         <p>
             Esta propiedad define la posición de la imagen de fondo, El primer valor es para
             el eje X (ancho, width), el segundo valor eje Y (alto, height), sino se
@@ -173,13 +185,97 @@
     </article>
 
     <article id="background-clip">
-        <h2>Propiedad <code>background-clip</code></h2>
+        <h2>Propiedad background-clip</h2>
         <p>
-            Esta propiedad define
+            Esta propiedad define cuánto debe extenderse el fondo dentro del elemento. <br>
+            Su valor por defecto es <code><b>border-box</b></code>, es decir que va a cubrir
+            hasta el elemento del borde, tiene mucha relacion con el <b>box model</b>.
         </p>
 
         <h3>Ejemplos:</h3>
         <div class="box bg-clip"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background-origin">
+        <h2>Propiedad background-origin</h2>
+        <p>
+            Esta propiedad define la posicion desde donde debe empezar la imagen de fondo. <br>
+            Su valor por defecto es <code><b>padding-box</b></code>.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-origin"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background-attachment">
+        <h2>Propiedad background-attachment</h2>
+        <p>
+            Esta propiedad define como se comportará la imagen de fondo al desplazarse por
+            la página.
+        </p>
+        <p>
+            Su valor por defecto es <code><b>scroll</b></code> que hace que la imagen de
+            fondo se mueva junto con su contenedor cuando scrolleamos en la pantalla.
+        </p>
+        <p>
+            con el vaor <code><b>fixed</b></code> la imagen se posiciona fijamente sobre el
+            area del viewport y conforme vamos scrolliando la pantalla se va visualizando la
+            imagen.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-attachment"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background">
+        <h2>Propiedad background</h2>
+        <p>
+            Esta propiedad es el atajo (o shorthand) de totdas las porpiedades anteriores y
+            el orden en que van los valores es: <br>
+            <code>background-image</code>, <code>background-position</code>,
+            <code>background-size</code>, <code>background-repeat</code>,
+            <code>background-origin</code>, <code>background-clip</code>,
+            <code>background-attachment</code> y <code>background-color</code>.
+        </p>
+        <p>
+            <b><u>NOTA</u></b>: En la medida de lo posible evita usar el shorthand
+            <code>background</code>, <b>no es una buena practica</b> es mejor usar cada una de las porpiedades
+            anteriores
+            por separado.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="fondos-multiples">
+        <h2>Fondos multiples</h2>
+        <p>Todas la propiedades de <code>background</code> pueden recibir varias imagens de
+            fondo separadas por comas ",".
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-multiple"></div>
+        <div class="box bg-art"></div>
 
         <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>

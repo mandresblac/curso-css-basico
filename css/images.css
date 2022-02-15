@@ -1,0 +1,65 @@
+/* Esto siempre debe ir al inicio de la hoja de estilos de css asi se resetea el tamaño de todas las cajas de todos  los elementos HTML que tenga en el documento para que no empiesen desde el content box sino desde el border */
+/* Articulo de Paul Irish sobre la poropiedad box-sizing */
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box; /* Esto es para que el tamaño de la caja empiese a contar desde border y no desde content box */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: brown;
+    background-color: rgb(129, 200, 218);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+code {
+    background-color: #e4e4e4;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------Imagenes responsive--------------------------------- */
+
+/* Esto siempre debe ir para el reseteo de los estilos de las imagenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* -------------------------------Imágenes con tamaños especificos----------------------- */
+
+
+
+
+
+
+
+
+
+

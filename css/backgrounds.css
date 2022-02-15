@@ -37,6 +37,9 @@ a {
     text-decoration: none;
 }
 
+code {
+    background-color: #e4e4e4;
+}
 
 /* -------------------------------------------------------------------------------------- */
 
@@ -86,6 +89,7 @@ a {
 /* ---------------------------Propiedad background-position------------------------------ */
 
 .bg-position {
+    background-color: lightblue;
     background-image: url("../assets/puesta-sol.jpg");
     background-size: 100px;
     background-repeat: no-repeat;
@@ -102,7 +106,80 @@ a {
 
 /* ---------------------------Propiedad background-clip------------------------------ */
 
+.bg-clip {
+    background-color: lightblue;
+    background-image: url("../assets/puesta-sol.jpg"); 
+    background-size: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box; /* border-box es el valor por defecto */
+    background-clip: padding-box;
+    background-clip: content-box;
+    padding: 1rem;
+}
 
 
+/* ---------------------------Propiedad background-origin------------------------------ */
+
+.bg-origin {
+    background-color: lightblue;
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: padding-box; /* padding-box es el valor por defecto */
+    background-origin: border-box;
+    background-origin: content-box;
+    padding: 1rem;
+}
+
+
+/* ---------------------------Propiedad background-attachment---------------------------- */
+
+.bg-attachment {
+    background-color: lightblue;
+    background-image: url("../assets/puesta-sol.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    background-attachment: scroll;
+    background-attachment: fixed;
+}
+
+
+/* ----------------------------------Propiedad background--------------------------------- */
+
+.bg {
+    background-color: lightblue;
+    background-image: url("../assets/puesta-sol.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    background-attachment: scroll;
+    background: red;
+}
+
+
+/* ----------------------------------Fondos multiples--------------------------------- */
+
+.bg-multiple {
+    width: 50%;
+    height: 30vh;
+    background-image: url(../assets/favicon.png), url(../assets/puesta-sol.jpg);
+    background-repeat: repeat-x, no-repeat;
+    background-size: 10%, cover;
+        
+}
+
+.bg-art {
+    width: 1000px;
+    height: 700px;
+    background: url(../assets/arbol.png) no-repeat center bottom, 
+        url(../assets/aves.png) no-repeat center bottom fixed, 
+        url(../assets/cielo.png) no-repeat center top;
+
+}
 
 
