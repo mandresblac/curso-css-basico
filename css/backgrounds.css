@@ -1,0 +1,108 @@
+/* Esto siempre debe ir al inicio de la hoja de estilos de css asi se resetea el tamaño de todas las cajas de todos  los elementos HTML que tenga en el documento para que no empiesen desde el content box sino desde el border */
+/* Articulo de Paul Irish sobre la poropiedad box-sizing */
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+    /* Esto es para que el tamaño de la caja empiese a contar desde border y no desde content box */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: brown;
+    background-color: rgb(129, 200, 218);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+.box {
+    margin: 2rem auto;
+    width: 300px;
+    height: 300px;
+    border: thick dashed red;
+}
+
+/* ------------------------------Propiedad background-color------------------------------ */
+
+.bg-color {
+    background-color: darkgreen;
+}
+
+/* ------------------------------Propiedad background-image------------------------------ */
+
+.bg-image {
+    background-image: url("../assets/puesta-sol.jpg");
+}
+
+/* ------------------------------Propiedad background-repeat------------------------------ */
+
+.bg-repeat {
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 100px;
+    background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+}
+
+
+
+/* ------------------------------Propiedad background-size------------------------------ */
+
+.bg-size {
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 300px 200px; /* Ancho = 300px, Alto = 200px */
+    background-size: 300px; /* Ancho = 300px, Altura = Se calcula automaticamente */
+    background-size: cover;
+    background-size: contain;
+}
+
+
+/* ---------------------------Propiedad background-position------------------------------ */
+
+.bg-position {
+    background-image: url("../assets/puesta-sol.jpg");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: 10px 20px; /* Se aleja 10px en horizontal (X) y 20px en vertical (Y) */
+    background-position: 1rem 2rem;
+    background-position: 10% 20%;
+    background-position: top center;
+    background-position: top right;
+    background-position: top left;
+    background-position: bottom center;
+    background-position: bottom right;
+}
+
+
+/* ---------------------------Propiedad background-clip------------------------------ */
+
+
+
+
+

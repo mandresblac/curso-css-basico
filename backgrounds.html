@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos del fondo en CSS</title>
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/backgrounds.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio-estilos-fondo">Estilos del fondo en CSS</h1>
+
+    <article id="temario-estilos-fondo">
+        <h2>Temario estilos del fondo en CSS</h2>
+        <ol type="a">
+            <li>
+                <a href="backgrounds.html#background-color">Propiedad <code>background-color</code></a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background-image">Propiedad <code>background-image</code></a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background-repeat">Propiedad <code>background-repeat</code></a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background-size">Propiedad <code>background-size</code></a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background-position">Propiedad <code>background-position</code></a>
+            </li>
+            <li>
+                <a href="backgrounds.html#background-clip">Propiedad <code>background-clip</code></a>
+            </li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <hr>
+    </article>
+
+    <article id="background-color">
+        <h2>Propiedad <code>background-color</code></h2>
+        <p>
+            Esta propiedad define el color de fondo del elemento.
+        </p>
+
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-color"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background-image">
+        <h2>Propiedad <code>background-image</code></h2>
+        <p>
+            Esta propiedad define la imagen de fondo del elemento. <br>
+            Es decir que podemos poner una imagen de fondo.
+        </p>
+        <p>
+            Este propiedad necesita la función <b><code>url("")</code></b> para mandar a llamar una imagen.
+        </p>
+
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-image"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background-repeat">
+        <h2>Propiedad <code>background-repeat</code></h2>
+        <p>
+            Esta propiedad define como es que se va a repetir la imagen de fondo en el
+            elemento.
+        </p>
+        <p>
+            Su valor por defecto es <code>repeat</code>.
+        </p>
+        <p>
+            Tambien tiene los valores:
+        </p>
+        <ul>
+            <li>
+                <code>repeat-x</code>: La imagen se repite solo en el eje horizontal (x).
+            </li>
+            <li>
+                <code>repeat-y</code>: La imagen se repite solo en el eje vertical (y).
+            </li>
+        </ul>
+        <p>
+            Tambien tiene el valor <code><b>no-repeat</b></code> para que la imagen se
+            repita solo una vez, esto es independientemente del tamaño de la imagen.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-repeat"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background-size">
+        <h2>Propiedad <code>background-size</code></h2>
+        <p>
+            Esta propiedad define el tamaño de la imagen de fondo. El primer valor es para
+            el eje X (ancho, width), el segundo valor eje Y (alto, height).
+        </p>
+        <p>
+            A esta propiedad le podemos a signar dos valores:
+        </p>
+        <ul>
+            <li>
+                <code><b>cover</b></code>: Cambia el tamaño de la imagen de fondo para
+                asegurarse de que permanesca completamente visible, adapta la imagen al
+                tamaño de la caja pero no asegura que se vea toda la imagen por completo.
+            </li>
+            <li>
+                <code><b>contain</b></code>: Cambia el tamaño de la imagen de fondo para
+                asegurarse de que cubre completamente el elemento, se asegura que la imagen
+                en su totalidad se vea por completo y que cubra la caja contenedora.
+            </li>
+        </ul>
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-size"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background-position">
+        <h2>Propiedad <code>background-position</code></h2>
+        <p>
+            Esta propiedad define la posición de la imagen de fondo, El primer valor es para
+            el eje X (ancho, width), el segundo valor eje Y (alto, height), sino se
+            especifica un segundo valor este cera <code>center</code>.
+        </p>
+        <p>
+            Aparte de los valores númericos podemos indicar el posicionamiento con los
+            valores: <code><b>center</b></code>, <code><b>top</b></code>, <code><b>bottom</b></code>,
+            <code><b>left</b></code> y <code><b>right</b></code>
+        </p>
+
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-position"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+    <article id="background-clip">
+        <h2>Propiedad <code>background-clip</code></h2>
+        <p>
+            Esta propiedad define
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <div class="box bg-clip"></div>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="backgrounds.html#inicio-estilos-fondo" class="volver-inicio">🔼 Ir a inicio Estilos del Fondo</a>
+        <hr>
+    </article>
+
+</body>
+
+</html>

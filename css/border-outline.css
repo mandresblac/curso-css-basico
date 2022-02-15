@@ -80,6 +80,28 @@ a {
 }
 
 
+/* ---------------------------------Propiedad outline------------------------------------ */
+
+.outline {
+    color: white;
+    text-align: center;
+    outline-style: 5px;
+    outline-style: dashed;
+    outline-color: chartreuse;
+    outline: thick solid blue;
+    /* border-width: 100px; */
+    /* outline-width: 100px; */
+    outline-offset: 3rem;
+    outline-offset: -3rem;
+}
+
+.input input {
+    outline-color: green;
+}
+
+
+
+
 
 
 
