@@ -75,7 +75,7 @@ a {
 }
 
 /* :valid - Si las cajas del formulario son llenadas con un valor valido los bordes se pondran de color verde */
-.contact-form>*[:required]:valid {
+.contact-form>*[required]:valid {
     border: thin solid var(--form-succes-color);
 }
 
