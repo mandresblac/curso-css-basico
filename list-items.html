@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos de listas en css</title>
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/list-items.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio-estilos-listas">Estilos para listas en css</h1>
+
+    <article id="temario-estilos-listas">
+        <h2>Temario estilos para listas en css</h2>
+        <ol type="a">
+            <li>
+                <a href="list-items.html#list-style-type">Propiedad list-style-type</a>
+            </li>
+            <li>
+                <a href="list-items.html#list-style-image">Propiedad list-style-image</a>
+            </li>
+            <li>
+                <a href="list-items.html#list-style-position">Propiedad list-style-position</a>
+            </li>
+            <li><a href="list-items.html#list-style">Propiedad list-style</a></li>
+            <li><a href="list-items.html#texto-en-columnas">Texto en columnas</a></li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <hr>
+    </article>
+
+    <article id="list-style-type">
+        <h2>Propiedad list-style-type</h2>
+        <p>
+            Define el tipo de viñeta de un elemento de lista.
+        </p>
+        <p>
+            Enlace a documentacion de la propiedad <code>list-style-type</code> en <a
+                href="https://developer.mozilla.org/es/docs/Web/CSS/list-style-type" target="_blank">MDN</a>.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <ul class="list1">
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="list-items.html#inicio-estilos-listas" class="volver-inicio">🔼 Ir a inicio estilos de listas</a>
+        <hr>
+    </article>
+
+    <article id="list-style-image">
+        <h2>Propiedad list-style-image</h2>
+        <p>
+            Define la imagen que se utilizará como viñeta de un elemento de lista.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <ul class="list2">
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>
+
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="list-items.html#inicio-estilos-listas" class="volver-inicio">🔼 Ir a inicio estilos de listas</a>
+        <hr>
+    </article>
+
+    <article id="list-style-position">
+        <h2>Propiedad list-style-position</h2>
+
+        <p>
+            Define la posición de las viñetas de una lista. Esta propiedad no se suele usar
+            mucho.
+        </p>
+        <p>
+            El valor por defecto es <code>outside</code>.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <ul class="list3">
+            <li>Primavera Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                accusantium dolores aut suscipit impedit ullam explicabo maiores
+                exercitationem commodi placeat labore ex delectus, quasi,officiis
+                repudiandae sit ipsa, magni odio!
+            </li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="list-items.html#inicio-estilos-listas" class="volver-inicio">🔼 Ir a inicio estilos de listas</a>
+        <hr>
+    </article>
+
+    <article id="list-style">
+        <h2>Propiedad list-style</h2>
+
+        <p>
+            La propiedad <code>list-style</code> es un atajo o shorthand para
+            <code>list-style-type</code>, <code>list-style-image</code> y
+            <code>list-style-position</code>.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <ul class="list4">
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="list-items.html#inicio-estilos-listas" class="volver-inicio">🔼 Ir a inicio estilos de listas</a>
+        <hr>
+    </article>
+
+    <article id="texto-en-columnas">
+        <h2>Texto en columnas</h2>
+        <p>
+            Hay 4 propiedades que nos controlan las columnas en listas:
+        </p>
+        <ul>
+            <li>
+                <code>column-count</code>: Para el n´umero de columnas que deseemos.
+            </li>
+            <li>
+                <code>column-gap</code>: El espacio de separacion entre una columna y otra.
+            </li>
+            <li>
+                <code>column-rule</code>: Pone un linea en sentido vertical a un lado de las
+                viñetas de cada columna.
+            </li>
+            <li>
+                <code>column-width</code>: Representa el tamaño minimo en anchura que van a
+                tener las columnas.
+            </li>
+        </ul>
+        <p>
+            <b>OJO</b>: No hay que ver esto como una tecnica de maquetación por que no lo es, para maquetacion se usa
+            <b>grid</b> y <b>flebox</b>.
+        </p>
+
+        <h3>Ejemplos:</h3>
+        <ol class="text-colum-4">
+            <li>Mú de Aries</li>
+            <li>Aldebarán de Tauro</li>
+            <li>Saga & Canon de Géminis</li>
+            <li>Death Mask de Cáncer</li>
+            <li>Aioria de Leo</li>
+            <li>Shaka de Virgo</li>
+            <li>Dohko de Libra</li>
+            <li>Milo de Escorpión</li>
+            <li>Aioros de Sagitario</li>
+            <li>Shura de capricornio</li>
+            <li>Camus de Acuario</li>
+            <li>Afrodita de Piscis</li>
+        </ol>
+
+        <article class="text-column-3">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic rerum,
+                magni repellendus possimus voluptas pariatur animi delectus accusamus
+                officiis qui maxime nihil quos blanditiis et commodi corrupti repellat
+                numquam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic rerum,
+                magni repellendus possimus voluptas pariatur animi delectus accusamus
+                officiis qui maxime nihil quos blanditiis et commodi corrupti repellat
+                numquam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic rerum,
+                magni repellendus possimus voluptas pariatur animi delectus accusamus
+                officiis qui maxime nihil quos blanditiis et commodi corrupti repellat
+                numquam.
+            </p>
+        </article>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="list-items.html#inicio-estilos-listas" class="volver-inicio">🔼 Ir a inicio estilos de listas</a>
+        <hr>
+    </article>
+
+</body>
+
+</html>

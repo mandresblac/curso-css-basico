@@ -47,19 +47,31 @@ code {
 
 /* Esto siempre debe ir para el reseteo de los estilos de las imagenes */
 img {
-    max-width: 100%;
+    max-width: 100%; /* La propiedad max-width significa que se le da la maxima anchura */
     height: auto;
 }
 
 
 /* -------------------------------Imágenes con tamaños especificos----------------------- */
 
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    border: medium solid black;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
-
-
-
-
-
-
-
+.card img {
+    background-color: blanchedalmond;
+    height: 300px;
+    object-fit: fill;
+    object-fit: cover; /* Despues de usar la propiedad object-fit hay que utlizar obligatoriamente la propiedad object-position */
+    object-position: 50% 50%;
+    object-position: left top;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
 

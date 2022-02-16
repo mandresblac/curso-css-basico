@@ -59,10 +59,31 @@
     <article id="imagenes-tamanio-especifico">
         <h2>Imágenes con tamaños especificos</h2>
 
-
+        <p>
+            Cuando necesitamos que las imágenes deban tener en el navegador un tamaño
+            especifico pero la imagen original no es de ese tamaño vamos a tener un problema
+            de deformacion de la imagen, pero lo que poedemos hacer par solucionar esto es
+            utilizar dos propidades que son:
+        </p>
+        <ul>
+            <li>
+                <code>object-fit</code>: Esta propiedad se parece mucho a la propiedad
+                <code>background-size</code> que tiene dos valores <code>cover</code> y
+                <code>contain</code> y aplican los mismos principios. <br>
+                El valor por defecto de <code>object-fit</code> es <code>fill</code> que
+                trata de ajustar las dimensiones de la imagen al tamño que le hemos
+                especificado sin contar su proporción, pero deforma la imágen.
+            </li>
+            <li>
+                <code>object-position</code>:
+            </li>
+        </ul>
 
         <h3>Ejemplos:</h3>
-        <img src="assets/puesta-sol.jpg" alt="Kenay y la puesta del sol">
+        <article class="card">
+            <img src="assets/puesta-sol.jpg" alt="Kenay y la puesta del sol">
+            <h4>Puesta de sol</h4>
+        </article>
 
         <br>
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
