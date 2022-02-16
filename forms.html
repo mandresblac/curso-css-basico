@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos para formularios en css</title>
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/forms.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio-estilos-formularios">Estilos para formularios en css</h1>
+
+    <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            title="Nombre solo acepta letras y espacios en blanco" required>
+        <input type="text" name="correo" placeholder="Escribe tu correo" pattern="^{\w+[/./-]?}{1,}@[a-z]+[/.]\w{2,}$"
+            title="Formato de correo invalido" required>
+        <textarea name="comentarios" placeholder="Escribe tus comentarios" cols="30" rows="10" required></textarea>
+        <input type="submit">
+
+    </form>
+
+
+    <br>
+    <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+    </article>
+
+</body>
+
+</html>
