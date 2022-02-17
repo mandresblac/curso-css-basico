@@ -157,10 +157,46 @@ img {
 }
 
 
+/* -----------------------------------Repetir degradados-------------------------------- */
+
+/* -----------------------------------repeat-gradient-linear------------------------------ */
+
+/* A 0° grados */
+.repeat-gradient-linear {
+    background-image: repeating-linear-gradient(red 0 10px, green 10px 20px, blue 20px 30px);
+}
+
+/* A 90° grados */
+.repeat-gradient-linear {
+    background-image: repeating-linear-gradient(90deg,red 0 10px, green 10px 20px, blue 20px 30px);
+}
+
+/* -----------------------------------repeat-gradient-radial----------------------------- */
+
+.repeat-gradient-radial {
+    background-image: repeating-radial-gradient(circle 4rem, cyan 0 10px, magenta 10px 20px, yellow 20px 30px);
+}
+
+/* -----------------------------------repeat-gradient-conic----------------------------- */
+
+.repeat-gradient-conic {
+    background-image: repeating-conic-gradient(red 0 8%, yellow 8% 16%, black 16% 24%);
+}
 
 
+/* -----------------------------------graficas-con-degradados----------------------------- */
 
+/* Grafico de pastel o circular*/
+.chart-gradient {
+    background-image: conic-gradient(cyan 0 50%, magenta 50% 80%, yellow 80%);
+    border-radius: 50%;
+}
 
+/* Grafica en forma de dona */
+.donut-gradient {
+    background-image: radial-gradient(white 30%, black 31%, transparent 33%), conic-gradient(cyan 0 50%, magenta 50% 80%, yellow 80%);
+    border-radius: 50%;
+}
 
 
 
