@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos visuales en CSS</title>
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/visual-effects.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="inicio-efectos-visuales">Efectos visuales en CSS</h1>
+
+    <article id="temario-efectos-visuales">
+        <h2>Temario efectos visuales en CSS</h2>
+        <ol type="a">
+            <li><a href="visual-effects.html#sombras">Sombras</a></li>
+            <li>
+                <a href="visual-effects.html#degradados">Degradados (gradients) en CSS</a>
+            </li>
+        </ol>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <hr>
+    </article>
+
+    <article id="sombras">
+        <h2>Sombras</h2>
+        <p>
+            Podemos aplicar tres tipos de
+            sombras:
+        </p>
+        <ul>
+            <li>
+                <h3>Sombra a la caja</h3>
+                La propiedad para trabajar las sombras en las cajas se llama
+                <code>box-shadow</code>.
+                <div class="box shadows1"></div>
+            </li>
+            <li>
+                <h3>Sombra al texto</h3>
+                La propiedad para trabajar las sombras en los textos se llama
+                <code>text-shadow</code>.
+                <div class="box shadows2">
+                    <p>Sombras</p>
+                </div>
+            </li>
+            <li>
+                <h3>Sombras multiples</h3>
+                Aplica tanto para cajas como para texto.
+                <div class="box shadows-multiple">
+                    <p>Sombras</p>
+                </div>
+            </li>
+            <li>
+                <h3>Filtro de sombras (drop-shadow)</h3>
+                <div class="box drop-shadow">
+                    <img src="assets/arbol.png" alt="Niño y arbol">
+                </div>
+            </li>
+        </ul>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="degradados">
+        <h2>Degradados (gradients) en CSS</h2>
+
+        <p>
+            Hay tres tipos de degradados en css:
+        </p>
+
+        <h3>Degradados líneales (linear-gradient)</h3>
+        <p>
+            Utilizamos la propiedad <code>background-image</code> con el valor
+            <code>linear-gradient()</code>.
+        </p>
+        <div class="box linear-gradient"></div>
+
+        <h3>Degradados Radiales (radial-gradient)</h3>
+        <p>
+            Utilizamos la propiedad <code>background-image</code> con el valor
+            <code>radial-gradient()</code>.
+        </p>
+        <p>
+            Por default el degradado radial es circular.
+        </p>
+        <div class="box radial-gradient"></div>
+
+        <h3>Degradados conicos (conic-gradient)</h3>
+        <p>
+            Utilizamos la propiedad <code>background-image</code> con el valor
+            <code>conic-gradient()</code>.
+        </p>
+        <div class="box conic-gradient"></div>
+
+        <p>
+            Enlace a <a href="https://cssgradient.io/" target="_blank">CSS Gradient</a> que
+            es un sitio para generar degradados en CSS.
+        </p>
+
+        <br>
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+</body>
+
+</html>

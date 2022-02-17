@@ -1,0 +1,166 @@
+/* Esto siempre debe ir al inicio de la hoja de estilos de css asi se resetea el tamaño de todas las cajas de todos  los elementos HTML que tenga en el documento para que no empiesen desde el content box sino desde el border */
+/* Articulo de Paul Irish sobre la poropiedad box-sizing */
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box; /* Esto es para que el tamaño de la caja empiese a contar desde border y no desde content box */
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: brown;
+    background-color: rgb(129, 200, 218);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+code {
+    background-color: #e4e4e4;
+}
+
+/* Esto siempre debe ir para el reseteo de los estilos de las imagenes */
+img {
+    max-width: 100%;
+    /* La propiedad max-width significa que se le da la maxima anchura */
+    height: auto;
+}
+
+
+/* -------------------------------Efectos de Sombras------------------------------------- */
+
+.box {
+    /* Para que se centre en la mitad de la pantalla del navegador */
+    margin-left: auto;
+    margin-right: auto;
+    /* -------------------------------------------------------------- */
+    margin-bottom: 5rem;
+    border: thick solid #000;
+    width: 200px;
+    height: 200px;
+}
+
+/* -------------------------------Sombra a la caja------------------------------------- */
+.shadows1 {
+    /*valores propiedad box-sahdow: mov-x mov-y blur-radius spread-blur color inset/outset*/
+    box-shadow: 1rem 1rem 1rem 1rem navy;
+    box-shadow: -1rem -1rem 1rem 1rem navy;
+    box-shadow: 1rem 1rem 1rem 1rem #0005;
+    box-shadow: 1rem 1rem 1rem 1rem #f00; 
+    box-shadow: 1rem 1rem 2rem .5rem #0007;/* El valor pordefecto de las sombras es outset */
+}
+
+/* -------------------------------Sombra al texto------------------------------------- */
+.shadows2 {
+    /*valores propiedad text-sahdow: mov-x mov-y blur-radius color*/
+    text-shadow: -1rem -1rem 0.4rem hotpink;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* -------------------------------Sombras multiples------------------------------------- */
+.shadows-multiple {
+    /* Sombaras a la caja */
+    box-shadow: 1rem 1rem 1rem 1rem #0005, 1rem 1rem 1rem 1rem #f00 inset, 
+        -.5rem -.5rem 0.5rem 2rem hotpink ;
+    /* Sombras al texto */
+    text-shadow: -1rem -1rem 0.4rem navy, 1rem 1rem 0.4rem greenyellow;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+/* -------------------------------Filtro de sombras (drop-shadow)----------------------- */
+
+.drop-shadow {
+    width: 600px;
+    height: auto;
+}
+
+.drop-shadow img {
+    /* filter: drop-shadow(mov-x mov-y blur-radius color); */
+    filter: drop-shadow(1rem 1rem 1rem steelblue);
+    box-shadow: 1rem 1rem 1rem 1rem #f00;
+}
+
+
+/* -------------------------------Degradados (gradients) en CSS----------------------- */
+
+/* -----------------------------------Degradados líneales-------------------------------- */
+
+.linear-gradient {
+    background-image: linear-gradient(0deg,red, green, blue);
+    background-image: linear-gradient(20deg, red, green, blue);
+    background-image: linear-gradient(45deg, red, green, blue);
+    background-image: linear-gradient(90deg, red, green, blue); /* deg para grados de */
+    background-image: linear-gradient(to right, red, green, blue);/* to right palabra clave */
+    background-image: linear-gradient(to top, red, green, blue);
+    background-image: linear-gradient(to bottom, red, green, blue);
+    background-image: linear-gradient(to top left, red, green, blue);
+    background-image: linear-gradient(to bottom left, red, green, blue);
+    background-image: linear-gradient(90deg,red 30%, green 60%, blue);
+    /*Bandera de Colombia */
+    background-image: linear-gradient(180deg, yellow 50%, blue 51% 75%, red 76%);
+}
+
+/* -----------------------------------Degradados radiales-------------------------------- */
+
+.radial-gradient {
+    background-image: radial-gradient(cyan, magenta);
+    background-image: radial-gradient(cyan, magenta, yellow);
+    background-image: radial-gradient(circle 4rem,cyan 30%, magenta 80%, yellow);
+    background-image: radial-gradient(circle 100px, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at top, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at bottom, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at left, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at top left, cyan 30%, magenta 60%, yellow 90%);
+    background-image: radial-gradient(circle 100px at top right, cyan 30%, magenta 60%, yellow 90%);
+    /* Degradado radial en forma de elipse */
+    background-image: radial-gradient(ellipse 50px 100px, cyan 30%, magenta 60%, yellow 90%);
+    /* bandera de japon */
+    background-image: radial-gradient(circle 100px, red 50%, white 50%);
+}
+
+/* -----------------------------------Degradados conicos-------------------------------- */
+
+.conic-gradient {
+    background-image: conic-gradient(red, green);
+    background-image: conic-gradient(red, green, blue);
+    background-image: conic-gradient(red 0% 50%, green 60%, blue 80%);
+    background-image: conic-gradient(red 0deg 90deg, green 120deg 240deg, blue 270deg);
+    background-image: conic-gradient(from 90deg,red 0deg 90deg, green 120deg 240deg, blue 270deg);
+    /* Bandera de republica checa */
+    background-image: conic-gradient(from 90deg ,red 0deg 120deg, white 120deg 240deg, blue 240deg);
+}
+
+
+
+
+
+
+
+
+
