@@ -199,4 +199,181 @@ img {
 }
 
 
+/* ---------------------------------Filtros (filter)-------------------------------- */
+
+.card {
+    /* Para que se centre en la mitad de la pantalla del navegador */
+    margin-left: auto;
+    margin-right: auto;
+    /* -------------------------------------------------------------- */
+    margin-bottom: 5rem;
+    border: thick solid #000;
+    width: 600px;
+    height: 400px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+.filter {
+    /* Filtros */
+    /* filter: blur(0.15rem);
+
+    filter: brightness(.75);
+    filter: brightness(4);
+
+    filter: contrast(0);
+    filter: contrast(4);
+
+    filter: grayscale(0);
+    filter: grayscale(0.5);
+    filter: grayscale(1);
+
+    filter: sepia(0);
+    filter: sepia(1);
+
+    filter: hue-rotate(0deg);
+    filter: hue-rotate(30deg);
+    filter: hue-rotate(60deg);
+    filter: hue-rotate(120deg);
+
+    filter: invert(0);
+    filter: invert(1);
+
+    filter: opacity(0);
+    filter: opacity(0.25);
+    filter: opacity(1);
+
+    filter: saturate(0);
+    filter: saturate(0.5);
+    filter: saturate(0.75);
+    filter: saturate(1);
+    filter: saturate(4);
+    filter: drop-shadow(1rem 1rem 1rem steelblue); */
+    filter: invert(1);
+}
+
+
+/* ---------------------------Filtros múltiples a un mismo elemento---------------------- */
+
+.filters-multiple {
+    filter: blur(0.1rem) hue-rotate(270deg) opacity(0.75) invert(1);
+}
+
+
+/* ---------------------------Filtros a fondos (backdrop-filter)------------------------- */
+
+.relative {
+    position: relative;
+}
+
+.backdrop-filter,
+.backdrop-filter-multiple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Aplicamos flexbox */
+    display: flex;
+    justify-content: center; /* Centra en el eje Principal que es el Horizontal (eje X) */
+    align-items: center; /* Centra en el eje Vertical (eje Y) */
+    text-align: center;
+}
+
+.backdrop-filter h4 {
+    border-radius: 1rem;
+    padding: 2rem;
+    font-size: 3rem;
+    color: #000;
+    background-color: rgba(255, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: grayscale(1);
+    backdrop-filter: sepia(1);
+    backdrop-filter: opacity(.25);
+    backdrop-filter: hue-rotate(180deg);
+    backdrop-filter: blur(.5rem);
+}
+
+
+/* -----------------------------Filtros multiples a fondos------------------------------ */
+
+.backdrop-filter-multiple h4 {
+    border-radius: 1rem;
+    padding: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    background-color: rgba(255, 102, 255, 0.5);
+    backdrop-filter: blur(1rem) hue-rotate(240deg) opacity(.75) invert(1);
+}
+
+
+/* -----------------------------Modo Dark/Light con filtros------------------------------ */
+
+/* Para aplicar los dos estilos que siguen a continuación hay que poner en la etiquita html del documento visual-effects.html la clase dark-mode */
+
+.dark-mode {
+    background-color: #fff; /* Es importante definir el color de fondo en blanco */
+    color: #000; /* Es importante definir el color de la letra en negro */
+    filter: invert(1);
+}
+
+.dark-mode img {
+    filter: invert(1); /* Invierte el filtro solo a las imagnes */
+}
+
+
+/* -------------------Modos de Mezcla sobre imagenes (mix-blend-mode)-------------------- */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* para que aplique los estilos sobre las imagenes que estan dentro de la clase card */
+.blend-modes img{
+    /* mix-blend-mode: normal;
+    mix-blend-mode: color;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: screen;
+    mix-blend-mode: multiply;
+    mix-blend-mode: saturation;
+    mix-blend-mode: luminosity;
+    mix-blend-mode: hue;
+    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
+    mix-blend-mode: hard-light;
+    mix-blend-mode: soft-light;
+    mix-blend-mode: lighten;
+    mix-blend-mode: overlay; */
+    mix-blend-mode: darken;
+}
+
+
+/* ------------Modos de Mezcla sobre imagenes de fondos (background-blend-mode)----------- */
+
+.bg-blend-modes {
+    background-image: url("../assets/puesta-sol.jpg"), url("../assets/BuenosDias.jpg");
+    background-size: cover;
+
+   /*  background-blend-mode: normal;
+    background-blend-mode: color; */
+    background-blend-mode: darken;
+}
+
+
+/* ----------------------------------Máscaras (clip-path)-------------------------------- */
+
+
+
 

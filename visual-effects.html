@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,27 @@
             <li>
                 <a href="visual-effects.html#graficas-con-degradados">Gráficas con degradados</a>
             </li>
+            <li><a href="visual-effects.html#filters">Filtros (filter)</a></li>
+            <li>
+                <a href="visual-effects.html#filtros-multiples">Filtros múltiples a un mismo elemento</a>
+            </li>
+            <li>
+                <a href="visual-effects.html#filtros-fondos">Filtros a fondos (backdrop-filter)</a>
+            </li>
+            <li>
+                <a href="visual-effects.html#filtros-multiples-fondos">Filtros multiples a fondos</a>
+            </li>
+            <li>
+                <a href="visual-effects.html#modo-dark-light">Modo Dark/Light con filtros</a>
+            </li>
+            <li>
+                <a href="visual-effects.html#modos-de-mezcla">Modos de Mezcla sobre imagenes (mix-blend-mode)</a>
+            </li>
+            <li>
+                <a href="visual-effects.html#modos-mezcla-fondos">Modos de Mezcla sobre
+                    imagenes de fondos (background-blend-mode)</a>
+            </li>
+            <li><a href="visual-effects.html#mascaras">Máscaras (clip-path)</a></li>
         </ol>
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
@@ -165,6 +186,162 @@
 
         <h3>Grafica en forma de dona</h3>
         <div class="box donut-gradient"></div>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="filters">
+        <h2>Filtros (filter)</h2>
+        <p>
+            Los filtros se aprecian mejor cuando los aplicamos a una imagen
+        </p>
+        <ul>
+            <li>
+                <code>filter: blur()</code>: Aplica una capa de desenfoque.
+            </li>
+            <li>
+                <code>filter: brightness()</code>: Intensidad de la luz en la imagen
+                (calridad u oscuridad de la imagen) y los valores van de 1 a 0.
+            </li>
+            <li>
+                <code>filter: contrast();</code>: Los valores van de 0 a 1.
+            </li>
+            <li>
+                <code>filter: grayscale()</code>: Esccala de grises, los valores van de 0 a
+                1.
+            </li>
+            <li>
+                <code>filter: sepia()</code>: Da color sepia y los valores van de 0 a 1.
+            </li>
+            <li>
+                <code>filter: hue-rotate()</code>: Su valor es <code>deg</code> (grados) y
+                va de 0° grados a 360° grados.
+            </li>
+            <li>
+                <code>filter: invert()</code>: Invierte los colores (positivo a negativo y
+                viceversa) y sus valores son 0 o 1.
+            </li>
+            <li>
+                <code>filter: opacity()</code>: Sus valores van de 0 a 1.
+            </li>
+            <li>
+                <code>filter: saturate()</code>: Sus valores van de 0 a 1.
+            </li>
+        </ul>
+
+        <article class="card">
+            <img class="filter" src="assets/puesta-sol.jpg" alt="Puesta de sol">
+        </article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="filtros-multiples">
+        <h2>Filtros múltiples a un mismo elemento</h2>
+
+        <article class="card">
+            <img class="filters-multiple" src="assets/puesta-sol.jpg" alt="Puesta de sol">
+        </article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="filtros-fondos">
+        <h2>Filtros a fondos (backdrop-filter)</h2>
+
+        <article class="card relative">
+            <img src="assets/puesta-sol.jpg" alt="Puesta de sol">
+            <div class="backdrop-filter">
+                <h4>Puesta de sol</h4>
+            </div>
+        </article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="filtros-multiples-fondos">
+        <h2>Filtros multiples a fondos</h2>
+        <p>
+            Podemos aplicar filtros a los fondos utilizando la propiedad
+            <code>backdrop-filter:</code>.
+        </p>
+
+        <article class="card relative">
+            <img src="assets/puesta-sol.jpg" alt="Puesta de sol">
+            <div class="backdrop-filter-multiple">
+                <h4>Puesta de sol</h4>
+            </div>
+        </article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="modo-dark-light">
+        <h2>Modo Dark/Light con filtros</h2>
+        <p>
+            A la etiquta <code>body</code> o ala etiquta <code>html</code> le aplicamos una clase, en este caso la clase
+            <b>dark-mode</b>
+        </p>
+
+        <article class="card">
+            <img src="assets/puesta-sol.jpg" alt="Puesta de sol">
+        </article>
+
+        <article class="card">
+            <img src="assets/favicon.png" alt="kenai">
+        </article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="modos-de-mezcla">
+        <h2>Modos de Mezcla sobre imagenes (mix-blend-mode)</h2>
+        <p>
+            Los modos de mezcla son efectos que se aplican sobre dos capas (que son las
+            imagenes).
+        </p>
+        <p>
+            la propiedad para aplicar los modos de mezcla se llama <code>mix-blend-mode</code> y su valor por defecto es
+            <code>normal</code>.
+        </p>
+
+        <article class="card relative blend-modes">
+            <img src="assets/puesta-sol.jpg" alt="Puesta de sol">
+            <img class="absolute" src="assets/BuenosDias.jpg" alt="Buenos dias">
+        </article>
+
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="modos-mezcla-fondos">
+        <h2>Modos de Mezcla sobre imagenes de fondos (background-blend-mode)</h2>
+
+        <article class="card bg-blend-modes"></article>
+
+        <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+        <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
+        <hr>
+    </article>
+
+    <article id="mascaras">
+        <h2>Máscaras (clip-path)</h2>
+
+
 
         <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
         <a href="visual-effects.html#inicio-efectos-visuales" class="volver-inicio">🔼 Ir a inicio efectos visuales</a>
