@@ -374,6 +374,91 @@ img {
 
 /* ----------------------------------Máscaras (clip-path)-------------------------------- */
 
+/* circle */
+.clip-path-circle {
+    /* clip-path: circle(2rem);
+    clip-path: circle(100px);
+    clip-path: circle(100px at top);
+    clip-path: circle(100px at left);
+    clip-path: circle(100px at right);
+    clip-path: circle(100px at bottom); */
+    clip-path: circle(100px at 20% 60%);
+}
+
+/* elipse */
+.clip-path-ellipse {
+    margin-top: 50px;
+    /* clip-path: ellipse(1rem 2rem);
+    clip-path: ellipse(100px 50px);
+    clip-path: ellipse(100px 50px at left);
+    clip-path: ellipse(100px 50px at right);
+    clip-path: ellipse(100px 50px at bottom);
+    clip-path: ellipse(100px 50px at right top); */
+    clip-path: ellipse(100px 50px at 18% 60%);
+}
+
+/* inset */
+.clip-path-inset {
+    margin-top: 50px;
+    /* clip-path: inset(2rem);
+    clip-path: inset(4rem); */
+    clip-path: inset(1rem round 1rem); /* Redondea esquinas de la mascara */
+    /* clip-path: inset(1rem round 1rem 2rem);
+    clip-path: inset(1rem round 1rem 2rem 3rem); */
+    clip-path: inset(1rem round 1rem 2rem 3rem 4rem);
+}
+
+/* pligonos */
+.clip-path-polygon {
+    /* clip-path: polygon(0 0, 100% 0, 50% 100%); */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+
+/* ----------------------------------Formas (shape-outside)------------------------------ */
+
+.shapes {
+    border: thick solid black;
+    padding: 1rem;
+    margin: 0 auto 5rem;
+    max-width: 800px;
+}
+
+.shapes h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.shapes img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.shape-1 {
+    margin: 4rem 2rem 4rem 0;
+    shape-outside: circle();
+}
+
+.shape-2 {
+    margin: 4rem 0 4rem 2rem;
+    shape-outside: ellipse();
+}
+
+.shape-3 {
+    margin: 2rem 8rem 0 0;
+    shape-outside: polygon(1% 19%, 25% 4%, 52% 4%, 59% 16%, 69% 37%, 66% 53%, 63% 67%, 72% 77%, 83% 84%, 98% 99%, 1% 99%);
+}
 
 
 

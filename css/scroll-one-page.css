@@ -1,0 +1,68 @@
+/* Esto siempre debe ir al inicio de la hoja de estilos de css asi se resetea el tamaño de todas las cajas de todos  los elementos HTML que tenga en el documento para que no empiesen desde el content box sino desde el border */
+/* Articulo de Paul Irish sobre la poropiedad box-sizing */
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+    /* Esto es para que el tamaño de la caja empiese a contar desde border y no desde content box */
+    font-family: sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth; /* Efecto de animacion cuando pasamos entre secciones con la propiedad scroll-behavior */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+body, 
+h1,
+h2 {
+    margin: 0;
+}
+
+img {
+    max-width: 50%; /* Ancho maximo de todas las imagenes */
+    height: auto;
+}
+
+/* [id] Selecciona todos los elementos que tengan atributo id */
+[id] {
+    scroll-margin-top: 7.56ex; /* 8ex es la medida de distancia */
+    /* un "ex" es aproximadamente la mitad de un "rem" o un "em"  */
+}
+
+.header {
+    position: sticky; /* Pone fija la cabecera cuando se hace scroll con el mouse */
+    top: 0;
+    padding: 0.25rem;
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+
+.header a {
+    margin: 0 1rem;
+    color: #00c4d6;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #e94bb4;
+}
+
+.slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #d9e8f0;
+    background-color: #1e2345;
+}
+
+/* El valor even es impar */
+.slide:nth-child(even) {
+    background-color: #108eb4;
+}
