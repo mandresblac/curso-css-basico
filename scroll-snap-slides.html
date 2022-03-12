@@ -8,15 +8,22 @@
     <title>Ajuste del Scroll, Efecto Slides
         Verticales (scroll-snap-type & scroll-snap-align)</title>
     <link rel="stylesheet" href="css/scroll-snap-slides.css">
+
+    <style>
+        /*La propiedad scroll-behavior con el valor smooth permite generar una animacion de movimiento en la pantalla (de scroll) al dar click en un enlace del temario la pantalla se mueve el tema correspondiente */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
     <main class="slides">
-        <secttion class="slide">
+        <secttion id="inicio" class="slide">
             <article class="slide-container">
                 <h1>Ajuste del Scroll, Efecto Slides
                     Verticales (scroll-snap-type & scroll-snap-align)</h1>
-                <a href="index.html#inicio" class="volver-inicio">◀️ Volver pagina principal</a>
+                <a href="index.html#inicio" class="volver-inicio">◀️ Volver a a pagina principal</a>
             </article>
         </secttion>
         <secttion class="slide">
@@ -55,6 +62,8 @@
                     libero, accusamus tempora incidunt cupiditate error molestias eius aspernatur aliquam accusantium
                     nulla eos itaque.
                     Vel?</p>
+                    <a href="index.html#inicio" class="volver-inicio">◀️ Volver a pagina principal</a>
+                    <a href="scroll-snap-slides.html#inicio">🔼 Inicio</a>
             </article>
         </secttion>
     </main>
